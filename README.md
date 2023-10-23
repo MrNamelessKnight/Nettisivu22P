@@ -1,2 +1,2 @@
 # Nettisivu22P
-# Jäsenet: Johanna, Ilmari, Antti & Veronica
+Jäsenet: Johanna, Ilmari, Antti & Veronica
