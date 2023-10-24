@@ -1,2 +1,2 @@
 # Nettisivu22P
-Mediaa, linkkejä 
+Mediaa (kuvia & videoita), linkkejä 
