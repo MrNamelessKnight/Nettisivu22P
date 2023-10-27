@@ -1,4 +1,4 @@
-# Nettisivu22P
+# HTML-CSS(-Bootstrap)
 Tänne tuodaan omien sivunen HTML-CSS(-Bootstrap) koodi <br>
 Täällä on valmiit [pohjat](https://github.com/MrNamelessKnight/Nettisivu22P/tree/htmlcss(bootstrap)/Pohjat) mitkä voi ladata ja lähtee tekemään
 
