@@ -1,2 +1,3 @@
 # Nettisivu22P
-Mediaa (kuvia & videoita), linkkejä 
+Media (kuvia & videoita), linkkejä 
+Pitääksesi oman kansion puhtaana ettet sekoita mitä kuvia on ladannut niin kannattaa poistaa ne
