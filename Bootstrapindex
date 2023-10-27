@@ -1,0 +1,108 @@
+<!--
+Lisäsin oman sivun Bootstrap pohjan jos joku haluaa tehdä mielummin sen kuin HTML-CSS, sillä ei pitäisi olla merkitystä kummalla tekee
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/x-icon" href="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6.4.2 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="Home.html">
+        Your Logo or Brand
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link disabled" style="color: #1e90ff; font-size: 25px"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #ff5733; font-size: 25px" href=""></a>
+          </li>
+          <!-- Add other menu items here -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Background image -->
+  <div class="bg-image" style="
+      background-size: cover;
+      background-position: center;
+      background-color: rgb(0,0,0);
+      background-repeat: no-repeat;
+      background-image: url('');
+      height: 100vh;
+  "></div>
+
+  <div class="container mt-5" 
+  style=" position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;">
+    <h1 class="mt-2 mb-0" style="color:white; font-size: 40px;"></h1>
+  </div>
+
+  <footer class="bg-black text-center text-white">
+    <div class="container p-4 pb-0">
+      <section class="mb-4">
+        <a
+          class="btn text-white btn-floating m-1"
+          style="background-color: #333333"
+          href=""
+          role="button"
+          ><i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ff0000"
+          href=""
+          role="button"
+          ><i class="fa-brands fa-youtube"></i>
+        </a>
+        <a
+          class="btn text-white btn-floating m-1"
+          style="background-color: #6441a4"
+          href=""
+          role="button"
+          ><i class="fa-brands fa-twitch"></i>
+        </a>
+        <a
+          class="btn text-white btn-floating m-1"
+          style="background-color: #000000"
+          href=""
+          role="button"
+          ><i class="fab fa-tiktok"></i>
+        </a>
+      </section>
+    </div>
+    <!-- Copyright -->
+    <div
+      class="text-center p-3 bg-black"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+    >
+      <!--<a href="" style="color:white"><b></b></a>-->
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and jQuery scripts should be included here -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
