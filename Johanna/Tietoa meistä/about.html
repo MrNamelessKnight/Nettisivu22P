@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome 6.4.2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Etusivu</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="#">WebHub</a></div>
+        <ul class="links">
+          <li><a href="hero">Home</a></li>
+          <li><a href="x">Test</a></li>
+          <li><a href="x">Test</a></li>
+          <li><a href="x">Test</a></li>
+        </ul>
+        <!--<a href="#" class="action_btn">Get Started</a>-->
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="hero">Home</a></li>
+          <li><a href="x">Test</a></li>
+          <li><a href="x">Test</a></li>
+          <li><a href="x">Test</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <img src="media/webhub.png" alt="WebHub" class="company-logo">
+        <div class="company-info">
+          <h1>Tietoa WebHubista</h1>
+          <p style="font-size: 20px;">
+            <b>
+              Olemme verkkosivusto, joka tarjoaa monipuolisia palveluita, <br> kuten kyselyiden luontia, kuvagallerioita ja paljon muuta.
+            </b>
+            </p>
+        </div>
+      </section>
+    </main>
+    
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropdownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
+
+        toggleBtnIcon.className = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
