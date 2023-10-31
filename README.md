@@ -1,3 +1,3 @@
 # Visuaalinen
-Media (kuvia & videoita), linkkejä <br>
-Pitääksesi oman kansion puhtaana ettet sekoita mitä kuvia on ladannut niin kannattaa poistaa ne
+Media (kuvia & videoita), linkkejä, kun öytää tiedostoja mitä haluaa jakaa muille/littää itselleen talteen <br>
+Pitääksesi oman kansion puhtaana, poista se kun olet käyttänyt sivussasi, jotta voit pitää kansiosi puhtaana
