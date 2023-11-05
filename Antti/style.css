@@ -1,12 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-  }
 body{
     height: 100vh;
     background-color: black;
+    background-image: url("kuva1.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -14,8 +9,9 @@ body{
     width: 100%;
     height: 60px;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 95, 161);
     margin-top: 40px;
+    opacity: 0.7;
 }
 .navbar-links{
     text-align: center;
@@ -25,20 +21,64 @@ body{
     margin-top: 12px;
 }
 .navbar-links a{
-    color: rgb(221, 219, 219);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 20px 16px;
 }
 .navbar-links a:hover{
-    background-color: #ddd;
-    color: black;
+    background-color: #0091d4;
+    color: rgb(0, 0, 0);
 }
 .navbar-links a.active{
-    background-color: rgb(41, 41, 41);
-    color:#ddd;
+    background-color: rgb(0, 195, 255);
+    color:#000000;
+    opacity: 0.7;
 }
 .container{
     justify-content: center;
     text-align: center;
-    color: lightgrey;
+    color: rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+.text1{
+    float: left;
+}
+.text1 h1{
+    font-size: 50px;
+}
+.text1 p{
+    text-align: left;
+    background-color: rgb(14, 95, 161);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.85;
+}
+.text2{
+    float: right;
+    padding-top: 1cm;
+}
+.text2 h2{
+    font-size: 40px;
+}
+.text2 p{
+    text-align: left;
+    background-color: rgb(14, 95, 161);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.85;
+}
+.text3{
+    padding-top: 1cm;
+    float: left;
+}
+.text3 h3{
+    font-size: 40px;
+}
+.text3 p{
+    text-align: left;
+    background-color: rgb(14, 95, 161);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.85;
 }
