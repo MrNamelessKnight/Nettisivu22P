@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome 6.4.2 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>Tietoturva</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="#">WebHub</a></div>
+      <ul class="links">
+        <li><a href="hero">Etusivu</a></li>
+        <li><a href="salasana.html">Salasana</a></li>
+        <li><a href="tietoturva.html">Tietoturva</a></li>
+        <li><a href="tietovisa.html">Tietovisa</a></li>
+        <li><a href="tietoa.html">Tietoa Meistä</a></li>
+
+      </ul>
+      <!--<a href="#" class="action_btn">Get Started</a>-->
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <ul>
+        <li><a href="hero">Etusivu</a></li>
+        <li><a href="salasana.html">Salasana</a></li>
+        <li><a href="tietoturva.html">Tietoturva</a></li>
+        <li><a href="tietovisa.html">Tietovisa</a></li>
+        <li><a href="tietoa.html">Tietoa Meistä</a></li>
+
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="text">
+            <div class="text-toggle">
+              <h1>Tietoturva</h1>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <p class="text-content">Tietoturva on äärimmäisen tärkeä nykypäivän digitaalisessa maailmassa. <br>
+              Se käsittää tietojen ja järjestelmien suojelemisen luvattomalta käytöltä, vahingoilta ja muilta
+              haitallisilta tapahtumilta. <br>
+              Tietoturva on olennainen niin yksityishenkilöille, yrityksille kuin myös organisaatioille.
+
+          </div>
+          <div class="row">
+            <div class="text">
+              <div class="text-toggle">
+                <h1>Miksi tietoturva on tärkeää?</h1>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <p class="text-content">Tietoturva on elintärkeää, koska se mahdollistaa henkilökohtaisten tietojesi ja
+                yksityisyytesi suojelemisen.
+                Tietoturva auttaa ehkäisemään herkän tiedon pääsyn vääriin käsiin ja sen väärinkäytön.
+                Lisäksi huolehtimalla tietoturvasta vähennät riskiä joutua taloudellisten petosten tai
+                identiteettivarkauksien uhriksi.
+                Tietoturva myös estää luvattoman pääsyn pankkitileihin ja luottokorttitietoihin.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="text">
+              <div class="text-toggle">
+                <h1>Miten voin huolehtia omasta tietoturvasta?</h1>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <p class="text-content">Oman tietoturvasi ylläpitäminen on ensisijaisen tärkeää digitaalisessa maailmassa.
+                Tässä on muutamia vinkkejä, jotka auttavat parantamaan tietoturvaasi:
+                <br>
+                1. Käytä vahvoja salasanoja: Valitse vähintään kahdeksan merkin mittainen salasana, joka sisältää
+                erilaisia merkkejä,
+                kuten isoja ja pieniä kirjaimia, numeroita ja erikoismerkkejä.
+                <br>
+                2. Vältä yleisiä salasanoja ja käytä eri salasanoja eri palveluissa.
+                <br>
+                3. Käytä kaksivaiheista tunnistautumista aina, kun se on mahdollista.
+                <br>
+                4. Pidä käyttöjärjestelmä, sovellukset ja ohjelmistot ajan tasalla. Päivitykset sisältävät usein
+                tärkeitä tietoturvaparannuksia,
+                jotka auttavat torjumaan uusimpia uhkia.
+              </p>
+            </div>
+          </div>
+
+        </div>
+    </section>
+  </main>
+  <script>
+    const toggleBtn = document.querySelector(".toggle_btn");
+    const toggleBtnIcon = document.querySelector(".toggle_btn i");
+    const dropdownMenu = document.querySelector(".dropdown_menu");
+
+    toggleBtn.onclick = function () {
+      dropdownMenu.classList.toggle("open");
+      const isOpen = dropdownMenu.classList.contains("open");
+
+      toggleBtnIcon.className = isOpen
+        ? "fas fa-xmark"
+        : "fas fa-bars";
+    };
+  </script>
+  <script>
+    document.querySelectorAll('.text-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const textContent = toggle.nextElementSibling; // Get the text content
+        textContent.classList.toggle('open'); // Toggle the 'open' class
+
+        const icon = toggle.querySelector('i');
+        icon.classList.toggle('fa-chevron-down'); // Toggle the icon class
+        icon.classList.toggle('fa-chevron-up');
+      });
+    });
+  </script>
+</body>
+
+</html>
