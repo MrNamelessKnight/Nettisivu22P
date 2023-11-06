@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kysymys 4</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        input[type=text], select {
+            width: 10%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+        }
+        #kysymysneljä {
+            margin-top: 23%;
+        }
+        .button:hover {
+            background-color: #38793a;
+        }
+    </style>
+    <script src="pisteidenlasku.js"></script>
+</head>
+<body>
+    <div id="kysymysneljä">
+        <h2>Kuka näytteli Frodoa Peter Jacsonin Taru sormusten herrasta elokuvatrilogiassa?</h2>
+        <form>
+            <select id="kysymys4">
+                <option value="vastaaJOTAIN">Valitse yksi</option>
+                <option value="wood">Elijah Wood</option>
+                <option value="astin">Sean Astin</option>
+                <option value="monaghan">Dominic Monaghan</option>
+            </select>
+        </form>
+        <a href="kysymys5.html">
+            <button class="button" onclick="pisteidenLASKU(4, 'wood')">Seuraava</button>
+        </a>
+    </div>
+</body>
+</html>

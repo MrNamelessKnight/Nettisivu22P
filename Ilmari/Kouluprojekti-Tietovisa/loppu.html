@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="pisteidenlasku.js"></script>
+    <title>Loppu</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        input[type=text] {
+            width: 10%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+        }
+        #pisteet {
+            margin-top: 23%;
+        }
+        .button:hover {
+            background-color: #38793a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pisteet">
+        <button onclick="näytäPISTEET()" class="button">Laske pisteet</button>
+        <a href="alkusivu.html">
+            <button class="button">Takaisin alkuun</button>
+        </a>
+        <label id="pisteet"></label>
+    </div>
+</body>
+
+</html>

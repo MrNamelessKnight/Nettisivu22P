@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kysymys 5</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        input[type=text], select {
+            width: 10%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+        }
+        #kysymysviisi {
+            margin-top: 23%;
+        }
+        .button:hover {
+            background-color: #38793a;
+        }
+    </style>
+    <script src="pisteidenlasku.js"></script>
+</head>
+<body>
+    <div id="kysymysviisi">
+        <h2>Kuka loppujen lopuksi ratkaisi sormuksen kohtalon?</h2>
+        <form>
+            <select id="kysymys5">
+                <option value="vastaaJOTAIN">Valitse yksi</option>
+                <option value="gandalf">Gandalf</option>
+                <option value="frodo">Frodo</option>
+                <option value="klonkku">Klonkku</option>
+            </select>
+        </form>
+        <a href="kysymys6.html">
+            <button class="button" onclick="pisteidenLASKU(5, 'klonkku')">Seuraava</button>
+        </a>
+    </div>
+</body>
+</html>
