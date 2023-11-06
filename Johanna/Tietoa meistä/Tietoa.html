@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome 6.4.2 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <title>Etusivu</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="#">WebHub</a></div>
+      <ul class="links">
+        <li><a href="hero">Etusivu</a></li>
+        <li><a href="salasana.html">Salasana</a></li>
+        <li><a href="tietoturva.html">Tietoturva</a></li>
+        <li><a href="tietovisa.html">Tietovisa</a></li>
+        <li><a href="tietoa.html">Tietoa Meistä</a></li>
+
+      </ul>
+      <!--<a href="#" class="action_btn">Get Started</a>-->
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="dropdown_menu">
+      <ul>
+        <li><a href="hero">Etusivu</a></li>
+        <li><a href="salasana.html">Salasana</a></li>
+        <li><a href="tietoturva.html">Tietoturva</a></li>
+        <li><a href="tietovisa.html">Tietovisa</a></li>
+        <li><a href="tietoa.html">Tietoa Meistä</a></li>
+
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="company-info">
+        <h1>Tietoa WebHubista</h1> <br>
+        <h2>Esittely video</h2>
+        <video width="500px" height="300px" controls="controls">
+          <source src="media/WebHub.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+  </main>
+
+
+  <script>
+    const toggleBtn = document.querySelector(".toggle_btn");
+    const toggleBtnIcon = document.querySelector(".toggle_btn i");
+    const dropdownMenu = document.querySelector(".dropdown_menu");
+
+    toggleBtn.onclick = function () {
+      dropdownMenu.classList.toggle("open");
+      const isOpen = dropdownMenu.classList.contains("open");
+
+      toggleBtnIcon.className = isOpen
+        ? "fa-solid fa-xmark"
+        : "fa-solid fa-bars";
+    };
+  </script>
+</body>
+
+</html>
