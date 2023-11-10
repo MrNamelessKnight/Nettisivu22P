@@ -130,38 +130,6 @@ section#hero {
     width: unset;
   }
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.container .text .row {
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 24px;
-}
-
-.text-content {
-  display: none;
-}
-
-.text-toggle i {
-  font-size: 16px;
-  margin-left: 5px;
-  cursor: pointer;
-  color: #38acc9;
-}
-
-.text-content.open {
-  display: block;
-}
 .password-container {
   width: 500px;
   padding: 20px;
