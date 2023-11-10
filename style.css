@@ -239,7 +239,7 @@ section#hero {
 
 .app h1 {
   font-size: 25px;
-  color: #ffffff;
+  color: #ffffffde;
   font-weight: 600;
   border-bottom: 1px solid #333;
   padding-bottom: 30px;
@@ -251,13 +251,13 @@ section#hero {
 
 .quiz h2 {
   font-size: 18px;
-  color: #ffffff;
+  color: #ffffffe5;
   font-weight: 600;
 }
 
 .btn {
-  background: #464444;
-  color: #222;
+  background: #6030b8;
+  color: #ffffffda;
   font-weight: 500;
   width: 100%;
   border: 1px solid #222;
