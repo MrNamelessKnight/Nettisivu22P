@@ -2,8 +2,7 @@
 <html lang="fi">
   <head>
     <meta charset="UTF-8" />
-
-    <link rel="icon" type="image/x-icon" href="webhub.png" />
+    <link rel="icon" type="image/x-icon" href="webhubT.png"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
@@ -14,26 +13,25 @@
     />
     <title>Etusivu</title>
     <style>
-    body {
-      height: 100vh;
-      background-color: #000;
-      background-image: url("media/picture.png");
-      backdrop-filter: blur(15px);
-      background-size: cover;
-      background-position: center;
-    }
-    </style>
+      body {
+        height: 100vh;
+        background-color: #000;
+        background-image: url("media/hdcar.gif");
+        backdrop-filter: blur(15px);
+        background-size: cover;
+        background-position: center;
+      }
+      </style>
   </head>
-
   <body>
     <header>
       <div class="navbar">
         <div class="logo"><a href="#">WebHub</a></div>
         <ul class="links">
-          <li><a>Etusivu</li>
+          <li><a href="hero">Etusivu</a></li>
           <li><a href="salasana.html">Salasana</a></li>
           <li><a href="tietoturva.html">Tietoturva</a></li>
-          <li><a href="tietoa.html">Tietoa Meistä</a></li>
+          <li><a>Tietoa Meistä</a></li>
         </ul>
         <!--<a href="#" class="action_btn">Get Started</a>-->
         <div class="toggle_btn">
@@ -42,23 +40,24 @@
       </div>
       <div class="dropdown_menu">
         <ul>
-          <li><a>Etusivu</a></li>
+          <li><a href="hero">Etusivu</a></li>
           <li><a href="salasana.html">Salasana</a></li>
           <li><a href="tietoturva.html">Tietoturva</a></li>
-          <li><a href="tietovisa.html">Tietovisa</a></li>
-          <li><a href="tietoa.html">Tietoa Meistä</a></li>
+          <li><a>Tietoa Meistä</a></li>
         </ul>
       </div>
     </header>
+
     <main>
       <section id="hero">
-        <h1>Tervetuloa</h1>
-        <p>
-          <b>
-            Nettisivulla on tarjota erilaisia sivuja mitä tutkia <br />
-            ja testata toiminnaltaan
-          </b>
-        </p>
+        <div class="company-info">
+          <h1>Tietoa WebHubista</h1>
+          <br />
+          <h2>Esittely video</h2>
+          <video width="500px" height="300px" controls="controls">
+            <source src="WebHub.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
     </main>
 
