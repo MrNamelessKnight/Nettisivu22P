@@ -15,7 +15,7 @@ a {
 }
 
 a:hover {
-  color: #7fffd4;
+  color: #7f96ff;
 }
 
 /* HEADER */
@@ -270,8 +270,8 @@ section#hero {
 }
 
 .btn:hover:not([disabled]) {
-  background: #222;
-  color: #332e2e;
+  background: #4832a83a;
+  color: #9e72b3e7;
 }
 
 .btn:disabled {

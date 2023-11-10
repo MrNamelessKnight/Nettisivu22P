@@ -54,13 +54,13 @@
       <div class="app">
         <h1>Tietovisa</h1>
         <div class="quiz">
-          <h2 id="question">Question goes here</h2>
+          <h2 id="question">Kysymykset tulevat tähän</h2>
           <div id="answer-buttons">
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
+            <button class="btn">Vastaus1</button>
+            <button class="btn">Vastaus2</button>
+            <button class="btn">Vastaus3</button>
           </div>
-          <button id="next-btn">Next</button>
+          <button id="next-btn">Seuraava</button>
         </div>
         <script>
           /* NAVIGATION BAR */
@@ -218,8 +218,8 @@
 
           function showScore() {
             resetState();
-            questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-            nextButton.innerHTML = "Play Again";
+            questionElement.innerHTML = `Sait pisteet ${score}/${questions.length}!`;
+            nextButton.innerHTML = "Pelaa uudelleen";
             nextButton.style.display = "block";
           }
 
