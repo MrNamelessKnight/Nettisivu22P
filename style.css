@@ -122,8 +122,8 @@
     }
   }
   
-  /* Additional Styles */
   .password-container {
+    background-color: pink;
     width: 500px;
     padding: 20px;
     border-radius: 10px;
@@ -146,7 +146,6 @@
     outline: none;
     font-size: 24px;
     letter-spacing: 4px;
-    color: #fff;
   }
   
   .input::placeholder {
@@ -174,7 +173,7 @@
   }
   
   .btn:hover {
-    background-color: rgb(32, 24, 134);
+    background-color: green;
   }
   
   .btn:active {
@@ -185,7 +184,7 @@
     position: fixed;
     width: 300px;
     height: 50px;
-    background-color: crimson;
+    background-color: lightgreen;
     right: 20px;
     bottom: 20px;
     border-radius: 10px;
@@ -200,44 +199,3 @@
   .active.alert-container {
     right: -300px;
   }
-  
-  /* Logo Styles */
-  .company-logo {
-    width: 200px; /* Adjust the width as needed */
-    height: auto; /* Maintains aspect ratio */
-    display: block;
-    margin: 0 auto; /* Center the logo horizontally */
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .container .text .row {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 24px; /* Increase the font size as needed */
-  }
-  
-  .text-content {
-    display: none; /* Hide the text content by default */
-  }
-  
-  .text-toggle i {
-    font-size: 16px; /* Adjust the icon size */
-    margin-left: 5px; /* Add some spacing between the text and the icon */
-    cursor: pointer;
-    color: #38acc9;
-  }
-  
-  .text-content.open {
-    display: block;
-  }
-  
