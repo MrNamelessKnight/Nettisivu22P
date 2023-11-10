@@ -191,7 +191,7 @@ section#hero {
   opacity: 0.7;
 }
 
-.btn {
+.sbtn {
   background: black;
   color: white;
   border: none;
@@ -202,7 +202,7 @@ section#hero {
   cursor: pointer;
 }
 
-.btn:hover {
+.sbtn:hover {
   background-color: rgb(32, 24, 134);
 }
 
@@ -250,12 +250,12 @@ section#hero {
 }
 
 .quiz h2 {
-  font-size: 18px;
+  font-size: 19px;
   color: #ffffffe5;
   font-weight: 600;
 }
 
-.btn {
+.qbtn {
   background: #6030b8;
   color: #ffffffda;
   font-weight: 500;
@@ -267,14 +267,15 @@ section#hero {
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s;
+  font-size: 18px;
 }
 
-.btn:hover:not([disabled]) {
+.qbtn:hover:not([disabled]) {
   background: #4832a83a;
   color: #9e72b3e7;
 }
 
-.btn:disabled {
+.qbtn:disabled {
   cursor: no-drop;
 }
 
