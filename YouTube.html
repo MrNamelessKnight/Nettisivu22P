@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="media/webhub.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome 6.4.2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Etusivu</title>
+    <style>
+      body {
+        height: 100vh;
+        background-color: #000;
+        background-image: url("media/picture.png");
+        backdrop-filter: blur(15px);
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a>WebHub</a></div>
+        <ul class="links">
+          <li><a href="Password.html">Salasana</a></li>
+          <li><a href="Security.html">Tietoturva</a></li>
+          <li><a href="AboutUs.html">Tietoa Meistä</a></li>
+          <li><a href="Quiz.html">Tietovisa</a></li>
+        </ul>
+        <!--<a href="#" class="action_btn">Get Started</a>-->
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="Password.html">Salasana</a></li>
+          <li><a href="Security.html">Tietoturva</a></li>
+          <li><a href="AboutUs.html">Tietoa Meistä</a></li>
+          <li><a href="Quiz.html">Tietovisa</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <section class="CC">
+          <h2 style="font-size: 30px">Iha Just Imus</h2>
+          <div class="row">
+            <div class="Videos">
+              <iframe
+                class="latestVideoEmbed"
+                data-vnum="0"
+                data-cid="UCDJWinHf7IBqJe1eqzWwdAw"
+                width="400"
+                height="300"
+              ></iframe>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!--JavaScript for YTVideo-->
+    <script>
+      var reqURL =
+        "https://api.rss2json.com/v1/api.json?rss_url=" +
+        encodeURIComponent(
+          "https://www.youtube.com/feeds/videos.xml?channel_id="
+        );
+      function loadVideo(iframe) {
+        $.getJSON(reqURL + iframe.getAttribute("data-cid"), function (data) {
+          var videoNumber = iframe.getAttribute("data-vnum")
+            ? Number(iframe.getAttribute("data-vnum"))
+            : 0;
+          console.log(videoNumber);
+          var link = data.items[videoNumber].link;
+          id = link.substr(link.indexOf("=") + 1);
+          iframe.setAttribute(
+            "src",
+            "https://youtube.com/embed/" + id + "?controls=0&autoplay=1"
+          );
+        });
+      }
+      var iframes = document.getElementsByClassName("latestVideoEmbed");
+      for (var i = 0, len = iframes.length; i < len; i++) {
+        loadVideo(iframes[i]);
+      }
+
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropdownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
+
+        toggleBtnIcon.className = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>

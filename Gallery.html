@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="media/webhub.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome 6.4.2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Galleria</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="slide">
+        <a href="Home.html" class="item" style="background-image: url(media/Nkuva1.png)">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">
+              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
+            </div>
+            <button class="btn primary readMore"><a href="Home.html">Etusivu</a></button>
+          </div>
+        </a>
+        <a href="Home.html" class="item" style="background-image: url(media/Nkuva3.png)">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">
+              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
+            </div>
+            <button class="btn primary readMore"><a href="Home.html">Etusivu</a></button>
+          </div>
+        </a>
+        <a href="Home.html" class="item" style="background-image: url(media/Nkuva2.png)">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">
+              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
+            </div>
+            <button class="btn primary readMore"><a href="Home.html">Etusivu</a></button>
+          </div>
+        </a>
+        <a href="Home.html" class="item" style="background-image: url(media/Nkuva4.png)">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">
+              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
+            </div>
+            <button class="btn primary readMore"><a href="Home.html">Etusivu</a></button>
+          </div>
+        </a>
+        <a href="Home.html" class="item" style="background-image: url(media/Nkuva5.png)">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">
+              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
+            </div>
+            <button class="btn primary readMore"><a href="Home.html">Etusivu</a></button>
+          </div>
+        </a>
+        <div class="item" style="background-image: url(media/Nkuva6.png)">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">
+              Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu
+            </div>
+            <button class="btn primary readMore"><a href="Home.html">Etusivu</a></button>
+
+          </div>
+        </div>
+      </div>
+      <div class="buttons1">
+        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("next").onclick = function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").appendChild(lists[0]);
+      };
+
+      document.getElementById("prev").onclick = function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").prepend(lists[lists.length - 1]);
+      };
+    </script>
+  </body>
+</html>
