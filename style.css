@@ -428,3 +428,12 @@ section#hero {
   font-weight: 600;
   color: #5245a6;
 }
+.btn-primary {
+  background: rgb(64, 58, 150); /* Your background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  /* Add other styles as needed */
+}

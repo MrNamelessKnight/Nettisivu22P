@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <title>Etusivu</title>
+    <title>YouTube</title>
     <style>
       body {
         height: 100vh;
@@ -20,6 +20,19 @@
         backdrop-filter: blur(15px);
         background-size: cover;
         background-position: center;
+      }
+
+      #hero {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 500px;
+      }
+
+      @media (max-width: 768px) {
+        #hero {
+          height: 300px;
+        }
       }
     </style>
   </head>
@@ -34,7 +47,6 @@
           <li><a href="AboutUs.html">Tietoa Meistä</a></li>
           <li><a href="Quiz.html">Tietovisa</a></li>
         </ul>
-        <!--<a href="#" class="action_btn">Get Started</a>-->
         <div class="toggle_btn">
           <i class="fa-solid fa-bars"></i>
         </div>
@@ -51,25 +63,23 @@
 
     <main>
       <section id="hero">
-        <section class="CC">
-          <h2 style="font-size: 30px">Iha Just Imus</h2>
-          <div class="row">
-            <div class="Videos">
-              <iframe
-                class="latestVideoEmbed"
-                data-vnum="0"
-                data-cid="UCDJWinHf7IBqJe1eqzWwdAw"
-                width="400"
-                height="300"
-              ></iframe>
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            </div>
+        <h1>YouTube <i class="fa-brands fa-youtube"></i></h1>
+        <h2 style="font-size: 30px">Iha Just Imus</h2>
+        <div class="row">
+          <div class="Videos">
+            <iframe
+              class="latestVideoEmbed"
+              data-vnum="0"
+              data-cid="UCDJWinHf7IBqJe1eqzWwdAw"
+              width="400"
+              height="400"
+            ></iframe>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
           </div>
-        </section>
+        </div>
       </section>
     </main>
 
-    <!--JavaScript for YTVideo-->
     <script>
       var reqURL =
         "https://api.rss2json.com/v1/api.json?rss_url=" +
