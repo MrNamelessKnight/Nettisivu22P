@@ -98,10 +98,9 @@ section#hero {
 }
 
 #hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
 }
-
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
   .navbar .links
@@ -370,8 +369,8 @@ section#hero {
   transform: translate(0, -50%);
   display: none;
   font-family: system-ui;
-  background-color: #252e35; 
-  padding: 10px; 
+  background-color: #252e35;
+  padding: 10px;
 }
 .item:nth-child(2) .content {
   display: block;
@@ -440,21 +439,39 @@ section#hero {
   /* Add other styles as needed */
 }
 /* HERO */
-section#hero2 {
+section#heroo {
   height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+#heroo h1 a {
+  font-size: 80px; /* Set the font size to 80 pixels */
+  color: #ffa500;
+  font-weight: 600;
   text-align: center;
-  color: #fff;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
-#heroo h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #9b2222;
-  display: inline-block;
+#heroo .background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 #bgVideo {
-  filter: blur(15px);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Set object-fit to cover */
+  filter: blur(12px);
+  background-color: #000;
 }
