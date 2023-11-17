@@ -370,6 +370,8 @@ section#hero {
   transform: translate(0, -50%);
   display: none;
   font-family: system-ui;
+  background-color: #252e35; 
+  padding: 10px; 
 }
 .item:nth-child(2) .content {
   display: block;
@@ -436,4 +438,23 @@ section#hero {
   border: none; /* Remove default button border */
   cursor: pointer; /* Add a pointer cursor on hover */
   /* Add other styles as needed */
+}
+/* HERO */
+section#hero2 {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+#heroo h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #9b2222;
+  display: inline-block;
+}
+#bgVideo {
+  filter: blur(15px);
 }
