@@ -6,7 +6,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="media/webhub.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome 6.4.2 CSS -->
     <link
@@ -17,14 +20,39 @@
   </head>
 
   <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a>WebHub</a></div>
+        <ul class="links">
+          <li><a href="Password.html">Salasana</a></li>
+          <li><a href="Security.html">Tietoturva</a></li>
+          <li><a href="AboutUs.html">Tietoa Meistä</a></li>
+          <li><a href="Quiz.html">Tietovisa</a></li>
+          <li><a href="Gallery.html">Galleria</a></li>
+        </ul>
+        <!--<a href="#" class="action_btn">Get Started</a>-->
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="Password.html">Salasana</a></li>
+          <li><a href="Security.html">Tietoturva</a></li>
+          <li><a href="AboutUs.html">Tietoa Meistä</a></li>
+          <li><a href="Quiz.html">Tietovisa</a></li>
+          <li><a href="Gallery.html">Galleria</a></li>
+        </ul>
+      </div>
+    </header>
     <div class="container">
       <div id="slide">
         <div class="item" style="background-image: url(media/Nkuva1.png)">
           <div class="content">
             <div class="name">Murot.</div>
             <div class="des">
-              Terveellinen aamupala arkeen... ja muutenkin jos tahtoo syödä niin iha
-              jees ruoka
+              Terveellinen aamupala arkeen... ja muutenkin jos tahtoo syödä niin
+              iha jees ruoka
             </div>
             <a class="btn-primary" href="Home.html">Etusivu</a>
           </div>
@@ -90,6 +118,19 @@
     </div>
 
     <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropdownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
+
+        toggleBtnIcon.className = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+
       document.getElementById("next").onclick = function () {
         let lists = document.querySelectorAll(".item");
         document.getElementById("slide").appendChild(lists[0]);
@@ -99,6 +140,16 @@
         let lists = document.querySelectorAll(".item");
         document.getElementById("slide").prepend(lists[lists.length - 1]);
       };
+
+      document.getElementById("next").addEventListener("click", function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").appendChild(lists[0]);
+      });
+
+      document.getElementById("prev").addEventListener("click", function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").prepend(lists[lists.length - 1]);
+      });
     </script>
   </body>
 </html>
