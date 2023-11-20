@@ -28,16 +28,17 @@
   <body>
     <header>
       <div class="navbar">
-        <div class="logo"><a>WebHub</a></div>
+        <div class="logo"><a href="#">WebHub</a></div>
         <ul class="links">
           <li><a href="Password.html">Salasana</a></li>
           <li><a href="Security.html">Tietoturva</a></li>
           <li><a href="AboutUs.html">Tietoa Meistä</a></li>
           <li><a href="Quiz.html">Tietovisa</a></li>
-          <li><a>YouTube</a></li>
+          <li><a href="Gallery.html">Galleria</a></li>
+          <li><a href="#">YouTube</a></li>
         </ul>
         <div class="toggle_btn">
-          <i class="fa-solid fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </div>
       </div>
       <div class="dropdown_menu">
@@ -46,10 +47,12 @@
           <li><a href="Security.html">Tietoturva</a></li>
           <li><a href="AboutUs.html">Tietoa Meistä</a></li>
           <li><a href="Quiz.html">Tietovisa</a></li>
-          <li><a>YouTube</a></li>
+          <li><a href="Gallery.html">Galleria</a></li>
+          <li><a href="#">YouTube</a></li>
         </ul>
       </div>
     </header>
+    
 
     <main>
       <section id="hero5">
@@ -62,14 +65,13 @@
               data-cid="UCDJWinHf7IBqJe1eqzWwdAw"
               width="350"
               height="350"
-              autoplay=0
+              autoplay="0"
             ></iframe>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
           </div>
         </div>
       </section>
     </main>
-    
 
     <script>
       var reqURL =
@@ -97,16 +99,10 @@
       }
 
       const toggleBtn = document.querySelector(".toggle_btn");
-      const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      const dropdownMenu = document.querySelector(".dropdown_menu");
+      const navbarLinks = document.querySelector(".navbar .links");
 
       toggleBtn.onclick = function () {
-        dropdownMenu.classList.toggle("open");
-        const isOpen = dropdownMenu.classList.contains("open");
-
-        toggleBtnIcon.className = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
+        navbarLinks.classList.toggle("show");
       };
     </script>
   </body>

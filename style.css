@@ -25,63 +25,55 @@ header {
   padding: 0 2rem;
 }
 
-.navbar {
-  width: 100%;
-  height: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .navbar .logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
+  text-decoration: none; /* Remove underlines from links */
+  color: #fff; /* Set link color */
 }
 
-.navbar .links {
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar .toggle_btn {
+.navbar .links a,
+.dropdown_menu li a {
+  text-decoration: none;
   color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
+  transition: color 0.3s ease; /* Add smooth color transition */
 }
 
-/* DROPDOWN MENU */
-.dropdown_menu {
-  display: none;
-  position: absolute;
-  right: 2rem;
-  top: 60px;
-  height: 0;
-  width: 300px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.navbar .links a:hover,
+.dropdown_menu li a:hover {
+  color: #ffd700; /* Change link color on hover */
 }
 
-.dropdown_menu.open {
-  height: 240px;
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar .links {
+    display: none; /* Hide links on medium screens */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar .links.show {
+    display: flex; /* Show links when the class is added */
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: none;
+  }
 }
 
-.dropdown_menu li {
-  padding: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 576px) {
+  .navbar .links {
+    top: 60px;
+  }
 }
-.dropdown_menu /*.action_btn*/ {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+
 
 /* HOME.html */
 section#hero {
