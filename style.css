@@ -128,6 +128,7 @@ section#hero {
   color: #fff;
   left: 50%;
   top: 50%;
+  margin-top: 300px;
 }
 
 .text-content {
@@ -145,6 +146,12 @@ section#hero {
 
 .text-content.open {
   display: block;
+}
+
+@media (max-width:576px){
+  .container {
+    margin-top: 50%;
+  }
 }
 /* PASSWORD.html */
 .password-container {
