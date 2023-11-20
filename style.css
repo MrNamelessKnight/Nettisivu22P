@@ -146,6 +146,29 @@ section#hero {
 .text-content.open {
   display: block;
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar .links
+
+    /*.navbar .action_btn*/ {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
 
 /* PASSWORD.html */
 .password-container {
@@ -242,6 +265,29 @@ section#hero {
   border-bottom: 1px solid #333;
   padding-bottom: 30px;
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar .links
+
+    /*.navbar .action_btn*/ {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
 
 /* QUIZ.html */
 .quiz {
@@ -298,7 +344,29 @@ section#hero {
 .incorrect {
   background: #ff9393;
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar .links
 
+    /*.navbar .action_btn*/ {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
 /* GALLERY.html */
 .container1 {
   position: absolute;
@@ -462,7 +530,29 @@ section#hero {
   background-attachment: fixed;
   background-size: cover;}
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar .links
 
+    /*.navbar .action_btn*/ {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
 /* 404.html */
 section#heroo {
   position: relative;
@@ -544,7 +634,29 @@ section#heroo {
     height: 300px;
   }
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar .links
 
+    /*.navbar .action_btn*/ {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
 /* ABOUTUS.html */
 #hero2 video {
   width: 600px;
@@ -581,7 +693,29 @@ section#heroo {
     margin: 0 auto; /* Center the video horizontally */
   }
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .navbar .links
 
+    /*.navbar .action_btn*/ {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
 
 
 
