@@ -365,14 +365,14 @@ section#hero2 {
     font-weight: 600;
     text-align: center;
     position: absolute;
-    top: 40%; 
+    top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
   }
 
   .item .content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%; 
@@ -393,7 +393,7 @@ section#hero2 {
     text-align: center;
     width: 100%;
     position: absolute;
-    top: 50%; 
+    top: 40%; 
     left: 50%; 
     transform: translate(-50%, -50%);
   }
