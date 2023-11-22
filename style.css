@@ -156,12 +156,25 @@ section#hero {
 /* PASSWORD.html */
 .password-container {
   width: 400px;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin: 10px;
 }
+section#hero2 {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
 
+#hero2 h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 .input-container {
   border: solid 2px black;
   padding: 10px;
