@@ -1,3 +1,5 @@
+<!-- MUUTTAKAA TEKSTIT DIV CLASS: NAME & DES KOHDISTA -->
+
 <!DOCTYPE html>
 <html lang="fi">
   <head>
@@ -57,7 +59,6 @@
 
     <div class="container1">
       <div id="slide">
-        
         <div class="item" style="background-image: url(media/Nkuva1.png)">
           <div class="content">
             <div class="name">Murot.</div>
@@ -129,45 +130,45 @@
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleBtn = document.querySelector(".toggle_btn");
-        const dropdownMenu = document.querySelector(".dropdown_menu");
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropdownMenu = document.querySelector(".dropdown_menu");
 
-        toggleBtn.addEventListener("click", function () {
-          dropdownMenu.classList.toggle("open");
-          const isOpen = dropdownMenu.classList.contains("open");
+      toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
 
-          toggleBtn.classList.toggle("fa-bars", !isOpen);
-          toggleBtn.classList.toggle("fa-xmark", isOpen);
-        });
+        toggleBtnIcon.className = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
 
-        document.getElementById("next").addEventListener("click", function () {
-          let lists = document.querySelectorAll(".item");
-          document.getElementById("slide").appendChild(lists[0]);
-          toggleImageVisibility();
-        });
+      document.getElementById("next").addEventListener("click", function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").appendChild(lists[0]);
+        toggleImageVisibility();
+      });
 
-        document.getElementById("prev").addEventListener("click", function () {
-          let lists = document.querySelectorAll(".item");
-          document.getElementById("slide").prepend(lists[lists.length - 1]);
-          toggleImageVisibility();
-        });
+      document.getElementById("prev").addEventListener("click", function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").prepend(lists[lists.length - 1]);
+        toggleImageVisibility();
+      });
 
-        function toggleImageVisibility() {
-          let currentImage = document.querySelector(
-            ".item:nth-child(2) .content"
-          );
-          if (currentImage) {
-            currentImage.classList.toggle("open");
-          }
+      function toggleImageVisibility() {
+        let currentImage = document.querySelector(
+          ".item:nth-child(2) .content"
+        );
+        if (currentImage) {
+          currentImage.classList.toggle("open");
         }
+      }
 
-        // Add event listeners to all .item elements
-        let items = document.querySelectorAll(".item");
-        items.forEach(function (item) {
-          item.addEventListener("click", function () {
-            toggleImageVisibility();
-          });
+      // Add event listeners to all .item elements
+      let items = document.querySelectorAll(".item");
+      items.forEach(function (item) {
+        item.addEventListener("click", function () {
+          toggleImageVisibility();
         });
       });
     </script>
