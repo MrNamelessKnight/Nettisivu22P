@@ -133,7 +133,6 @@ section#hero {
 
 .text-content {
   display: none;
-  
 }
 
 .text-toggle i {
@@ -141,14 +140,13 @@ section#hero {
   margin-left: 5px;
   cursor: pointer;
   color: #38acc9;
-  
 }
 
 .text-content.open {
   display: block;
 }
 
-@media (max-width:576px){
+@media (max-width: 576px) {
   .container {
     margin-top: 50%;
   }
@@ -260,6 +258,36 @@ section#hero2 {
   font-weight: 600;
   border-bottom: 1px solid #333;
   padding-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .password-container {
+    width: 90%; /* Adjust the width for smaller screens */
+    margin: 10px auto; /* Center the container */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  #hero2 h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .input-container {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  .input {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .sbtn {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .alert-container {
+    width: 90%; /* Adjust width for smaller screens */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
 }
 /* QUIZ.html */
 .quiz {
