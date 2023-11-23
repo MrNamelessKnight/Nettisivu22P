@@ -28,33 +28,34 @@
   <body>
     <header>
       <div class="navbar">
-        <div class="logo"><a href="#">WebHub</a></div>
+        <div class="logo"><a href="Home.html">WebHub</a></div>
         <ul class="links">
-          <li><a href="Password.html">Salasana</a></li>
+          <li><a>Salasana</a></li>
           <li><a href="Security.html">Tietoturva</a></li>
           <li><a href="AboutUs.html">Tietoa Meistä</a></li>
           <li><a href="Quiz.html">Tietovisa</a></li>
           <li><a href="Gallery.html">Galleria</a></li>
-          <li><a href="#">YouTube</a></li>
+          <li><a href="YouTube.html">YouTube</a></li>
         </ul>
+        <!--<a href="#" class="action_btn">Get Started</a>-->
         <div class="toggle_btn">
-          <i class="fas fa-bars"></i>
+          <i class="fa-solid fa-bars"></i>
         </div>
       </div>
       <div class="dropdown_menu">
         <ul>
-          <li><a href="Password.html">Salasana</a></li>
+          <li><a>Salasana</a></li>
           <li><a href="Security.html">Tietoturva</a></li>
           <li><a href="AboutUs.html">Tietoa Meistä</a></li>
           <li><a href="Quiz.html">Tietovisa</a></li>
           <li><a href="Gallery.html">Galleria</a></li>
-          <li><a href="#">YouTube</a></li>
+          <li><a href="YouTube.html">YouTube</a></li>
         </ul>
       </div>
     </header>
 
     <main>
-      <section id="hero5">
+      <section id="hero2">
         <h2>Iha Just Imus</h2>
         <div class="row">
           <div class="Videos">
@@ -98,10 +99,16 @@
       }
 
       const toggleBtn = document.querySelector(".toggle_btn");
-      const navbarLinks = document.querySelector(".navbar .links");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropdownMenu = document.querySelector(".dropdown_menu");
 
       toggleBtn.onclick = function () {
-        navbarLinks.classList.toggle("show");
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
+
+        toggleBtnIcon.className = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
       };
 
       async function checkForUpdates() {
