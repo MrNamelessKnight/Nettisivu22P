@@ -80,7 +80,9 @@ header {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
-  .navbar .links .navbar .toggle_btn {
+  .navbar .links
+
+  .navbar .toggle_btn {
     display: block;
   }
 
@@ -361,6 +363,7 @@ section#hero2 {
     margin: 10px 0;
   }
 }
+
 
 /* GALLERY.html */
 .container1 {
@@ -783,3 +786,4 @@ h2 {
     margin: 0;
   }
 }
+
