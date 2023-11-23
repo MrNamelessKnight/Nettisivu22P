@@ -148,10 +148,9 @@ section#hero {
 
 @media only screen and (max-width: 576px) {
   .container {
-    margin-top: 50%;
+    margin-top: 50px;
   }
 }
-
 
 /* PASSWORD.html */
 .password-container {
@@ -161,6 +160,7 @@ section#hero {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin: 10px;
 }
+
 section#hero2 {
   height: calc(100vh - 60px);
   display: flex;
@@ -175,6 +175,7 @@ section#hero2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 .input-container {
   border: solid 2px black;
   padding: 10px;
@@ -262,7 +263,7 @@ section#hero2 {
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .password-container {
     width: 90%;
     margin: 10px auto;
@@ -291,6 +292,7 @@ section#hero2 {
     font-size: 16px;
   }
 }
+
 /* QUIZ.html */
 .quiz {
   padding: 20px 0;
@@ -365,7 +367,6 @@ section#hero2 {
     margin: 10px 0;
   }
 }
-
 
 /* GALLERY.html */
 .container1 {
@@ -598,7 +599,6 @@ section#hero2 {
   }
 }
 
-
 /* 404.html */
 section#heroo {
   position: relative;
@@ -677,7 +677,6 @@ section#hero2 {
     /* Add more properties if needed */
   }
 }
-
 
 /* ABOUTUS.html */
 #hero3 video {
