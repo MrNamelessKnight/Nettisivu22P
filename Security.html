@@ -54,55 +54,55 @@
       </div>
     </header>
 
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="text">
-          <div class="text-toggle">
-            <h1 class="toggle-title">Turvallinen Digitaalimaailma</h1>
-            <i class="fas fa-chevron-down"></i>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="text">
+            <div class="text-toggle">
+              <h1 class="toggle-title">Turvallinen Digitaalimaailma</h1>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <p style="font-size: 18px" class="text-content">
+              Tietoturva on digitaalisen maailman vartija, suojaten tietoja
+              luvattomalta käytöltä. <br />
+              Elintärkeä niin yksityishenkilöille kuin yrityksille ja
+              organisaatioille.
+            </p>
           </div>
-          <p style="font-size: 18px" class="text-content">
-            Tietoturva on digitaalisen maailman vartija, suojaten tietoja
-            luvattomalta käytöltä. <br />
-            Elintärkeä niin yksityishenkilöille kuin yrityksille ja
-            organisaatioille.
-          </p>
-        </div>
 
-        <div class="row">
-          <div class="text">
-            <div class="text-toggle">
-              <h1 class="toggle-title">Miksi tietoturva on tärkeää?</h1>
-              <i class="fas fa-chevron-down"></i>
+          <div class="row">
+            <div class="text">
+              <div class="text-toggle">
+                <h1 class="toggle-title">Miksi tietoturva on tärkeää?</h1>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <p style="font-size: 18px" class="text-content">
+                Tietoturva on olennainen yksityisyyden ja taloudellisen
+                turvallisuuden varmistaja verkossa,<br />
+                estäen tietojen väärinkäytön ja suojaillen pankki- ja
+                luottokorttitietoja.
+              </p>
             </div>
-            <p style="font-size: 18px" class="text-content">
-              Tietoturva on olennainen yksityisyyden ja taloudellisen
-              turvallisuuden varmistaja verkossa,<br />
-              estäen tietojen väärinkäytön ja suojaillen pankki- ja
-              luottokorttitietoja.
-            </p>
           </div>
-        </div>
-        <div class="row">
-          <div class="text">
-            <div class="text-toggle">
-              <h1 class="toggle-title">
-                Turvallinen Digimaailma: Vinkit Tietoturvaan
-              </h1>
-              <i class="fas fa-chevron-down"></i>
+          <div class="row">
+            <div class="text">
+              <div class="text-toggle">
+                <h1 class="toggle-title">
+                  Turvallinen Digimaailma: Vinkit Tietoturvaan
+                </h1>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <p style="font-size: 18px" class="text-content">
+                Digimaailman turvallisuus on avain huoleton suunnistamiseen
+                verkossa. Vahvojen salasanojen, <br />
+                yksilöllisten tunnusten ja päivitettyjen järjestelmien avulla
+                voit vahvistaa tietoturvaasi.
+              </p>
             </div>
-            <p style="font-size: 18px" class="text-content">
-              Digimaailman turvallisuus on avain huoleton suunnistamiseen
-              verkossa. Vahvojen salasanojen, <br />
-              yksilöllisten tunnusten ja päivitettyjen järjestelmien avulla
-              voit vahvistaa tietoturvaasi.
-            </p>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
     <script>
       const toggleBtn = document.querySelector(".toggle_btn");
@@ -117,15 +117,28 @@
       };
 
       document.querySelectorAll(".text-toggle").forEach((toggle) => {
-      toggle.addEventListener("click", () => {
-        const textContent = toggle.nextElementSibling; // Get the text content
-        textContent.classList.toggle("open"); // Toggle the 'open' class
+        toggle.addEventListener("click", () => {
+          // Close all open text contents
+          document.querySelectorAll(".text-content.open").forEach((content) => {
+            content.classList.remove("open");
+          });
 
-        const icon = toggle.querySelector("i");
-        icon.classList.toggle("fa-chevron-down"); // Toggle the icon class
-        icon.classList.toggle("fa-chevron-up");
+          // Close all open icons
+          document
+            .querySelectorAll(".text-toggle i.fa-chevron-up")
+            .forEach((openIcon) => {
+              openIcon.classList.remove("fa-chevron-up");
+              openIcon.classList.add("fa-chevron-down");
+            });
+
+          const textContent = toggle.nextElementSibling; // Get the text content
+          textContent.classList.toggle("open"); // Toggle the 'open' class
+
+          const icon = toggle.querySelector("i");
+          icon.classList.toggle("fa-chevron-down"); // Toggle the icon class
+          icon.classList.toggle("fa-chevron-up");
+        });
       });
-    });
     </script>
   </body>
 </html>
