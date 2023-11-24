@@ -14,9 +14,10 @@
     <title>Etusivu</title>
     <style>
       body {
+        overflow: hidden;
         height: 100vh;
         background-color: #000;
-        background-image: url("media/picture.png");
+        background-image: url("media/b.jpg");
         backdrop-filter: blur(15px);
         background-size: cover;
         background-position: center;
@@ -52,74 +53,70 @@
         </ul>
       </div>
     </header>
+
     <div class="container">
-      <div id="slide">
-        <div class="item" style="background-image: url(media/Nkuva1.png)">
-          <div class="content">
-            <div class="name">Murot.</div>
-            <div class="des">
-              Terveellinen aamupala arkeen... ja muutenkin jos tahtoo syödä niin
-              iha jees ruoka
+        <div class="arrow l" onclick="prev()">
+          <img src="media/L.png" />
+        </div>
+        <div class="slide slide-1">
+          <div class="caption">
+            <div class="text-box">
+              <h3>Murot.</h3>
+              <p>
+                Terveellinen aamupala arkeen... ja muutenkin jos tahtoo syödä niin
+                iha jees ruoka
+              </p>
             </div>
-            <button>See more</button>
           </div>
         </div>
-        <div class="item" style="background-image: url(media/Nkuva2.png)">
-          <div class="content">
-            <div class="name">HurHur 2</div>
-            <div class="des">
+        <div class="slide slide-2">
+          <div class="caption">
+            <h3>HurHur 2</h3>
+            <p>
               Tässä videossa sukellamme Hurhur kakkosen maailmaan ja paljastamme
               mielenkiintoista sisältöä. Mitähän se mahtaisi olla? Ehkä Konstan
               salainen kanava?
-            </div>
-            <button>See more</button>
+            </p>
           </div>
         </div>
-        <div class="item" style="background-image: url(media/Nkuva3.png)">
-          <div class="content">
-            <div class="name">Jagabee?</div>
-            <div class="des">
+        <div class="slide slide-3">
+          <div class="caption">
+            <h3>Jagabee?</h3>
+            <p>
               Jagabee? Mitähköhän se voisi olla...? Konstaa se ainakin näyttää
               kovasti kiinnostavan
-            </div>
-            <button>See more</button>
+            </p>
           </div>
         </div>
-        <div class="item" style="background-image: url(media/Nkuva4.png)">
-          <div class="content">
-            <div class="name">Konsta ja Olli</div>
-            <div class="des">
+        <div class="slide slide-4">
+          <div class="caption">
+            <h3>Konsta ja Olli</h3>
+            <p>
               On Konstan ja Ollin ystävyys vaan ihmeellistä.. sinä yhtenä
               päivänä he päättivät olevan valmiita ottamaan seuraavan askeleen,
               eli siis mennä yhteiseen hauta-arkkuun.
-            </div>
-            <button>See more</button>
+            </p>
           </div>
         </div>
-        <div class="item" style="background-image: url(media/Nkuva5.png)">
-          <div class="content">
-            <div class="name">Konsta Saajanto</div>
-            <div class="des">
-              Mielenkiintoinen, iloinen, ja elämästään nauttiva yksilö.
-            </div>
-            <button>See more</button>
+        <div class="slide slide-5">
+          <div class="caption">
+            <h3>Konsta Saajanto</h3>
+            <p>Mielenkiintoinen, iloinen, ja elämästään nauttiva yksilö.</p>
           </div>
         </div>
-        <div class="item" style="background-image: url(media/Nkuva6.png)">
-          <div class="content">
-            <div class="name">Kiehtovaa</div>
-            <div class="des">
-
-            </div>
-            <button>See more</button>
+        <div class="slide slide-6">
+          <div class="caption">
+            <h3>Kiehtovaa</h3>
+            <p>
+              Voi Konsta, tähänkö sitä ollaan menty että pitää iltaisinkin
+              aina tarkistaa että meneehän sillä Ollilla nyt kaikki hyvin :D
+            </p>
           </div>
         </div>
-      </div>
-      <div class="arrow r" onclick="next()">
-        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
-      </div>
-    </div>
+        <div class="arrow r" onclick="next()">
+          <img src="media/R.png" />
+        </div>
+      </div>      
 
     <script>
       /* NAVIGATION BAR */
@@ -137,7 +134,6 @@
             : "fa-solid fa-bars";
         };
       });
-
       let slide = document.querySelectorAll(".slide");
       var current = 0;
 
