@@ -53,72 +53,58 @@
         </ul>
       </div>
     </header>
-    <main>
-      <div class="container">
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="text">
+          <div class="text-toggle">
+            <h1 class="toggle-title">Turvallinen Digitaalimaailma</h1>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <p style="font-size: 18px" class="text-content">
+            Tietoturva on digitaalisen maailman vartija, suojaten tietoja
+            luvattomalta käytöltä. <br />
+            Elintärkeä niin yksityishenkilöille kuin yrityksille ja
+            organisaatioille.
+          </p>
+        </div>
+
         <div class="row">
           <div class="text">
             <div class="text-toggle">
-              <h1>Tietoturva</h1>
+              <h1 class="toggle-title">Miksi tietoturva on tärkeää?</h1>
               <i class="fas fa-chevron-down"></i>
             </div>
             <p style="font-size: 18px" class="text-content">
-              Tietoturva on keskeinen osa digitaalista maailmaa, <br />
-              joka suojaa tietoja ja järjestelmiä luvattomalta käytöltä ja
-              vahingoilta.
-              <br />
-              Se on elintärkeää niin yksityishenkilöille kuin yrityksille ja
-              organisaatioille.
+              Tietoturva on olennainen yksityisyyden ja taloudellisen
+              turvallisuuden varmistaja verkossa,<br />
+              estäen tietojen väärinkäytön ja suojaillen pankki- ja
+              luottokorttitietoja.
             </p>
           </div>
-
-          <div class="row">
-            <div class="text">
-              <div class="text-toggle">
-                <h1>Miksi tietoturva on tärkeää?</h1>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <p style="font-size: 18px" class="text-content">
-                Tietoturva on tärkeää yksityisyyden suojelemiseksi ja riskien
-                vähentämiseksi.
-                <br />
-                Se estää arkaluontoisen tiedon väärinkäytön ja suojaa
-                taloudellisilta petoksilta
-                <br />sekä identiteettivarkauksilta, myös pankkitileiltä ja
-                luottokorttitiedoilta.
-              </p>
+        </div>
+        <div class="row">
+          <div class="text">
+            <div class="text-toggle">
+              <h1 class="toggle-title">
+                Turvallinen Digimaailma: Vinkit Tietoturvaan
+              </h1>
+              <i class="fas fa-chevron-down"></i>
             </div>
-          </div>
-          <div class="row">
-            <div class="text">
-              <div class="text-toggle">
-                <h1>Miten voin huolehtia omasta tietoturvasta?</h1>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <p style="font-size: 18px" class="text-content">
-                Tietoturvan ylläpito digitaalisessa maailmassa on ensisijaisen
-                tärkeää. Paranna turvallisuuttasi seuraavilla vinkeillä:
-                <br />
-                1. Vahvat salasanat: Käytä vähintään kahdeksan merkin
-                salasanoja, joissa on eri merkkejä.
-                <br />
-                2. Vältä yleisiä salasanoja: Käytä erilaisia salasanoja eri
-                palveluissa.
-                <br />
-                3. Kaksivaiheinen tunnistautuminen: Käytä sitä aina, kun
-                mahdollista.
-                <br />
-                4. Päivitä järjestelmät: Pidä käyttöjärjestelmä, sovellukset ja
-                ohjelmistot ajan tasalla tärkeiden tietoturvapäivitysten
-                saamiseksi.
-              </p>
-            </div>
+            <p style="font-size: 18px" class="text-content">
+              Digimaailman turvallisuus on avain huoleton suunnistamiseen
+              verkossa. Vahvojen salasanojen, <br />
+              yksilöllisten tunnusten ja päivitettyjen järjestelmien avulla
+              voit vahvistaa tietoturvaasi.
+            </p>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
     <script>
-      /* NAVIGATION BAR */
       const toggleBtn = document.querySelector(".toggle_btn");
       const toggleBtnIcon = document.querySelector(".toggle_btn i");
       const dropdownMenu = document.querySelector(".dropdown_menu");
@@ -127,30 +113,19 @@
         dropdownMenu.classList.toggle("open");
         const isOpen = dropdownMenu.classList.contains("open");
 
-        toggleBtnIcon.className = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
+        toggleBtnIcon.className = isOpen ? "fas fa-xmark" : "fas fa-bars";
       };
+
       document.querySelectorAll(".text-toggle").forEach((toggle) => {
-        toggle.addEventListener("click", () => {
-          const textContent = toggle.nextElementSibling; // Get the text content
+      toggle.addEventListener("click", () => {
+        const textContent = toggle.nextElementSibling; // Get the text content
+        textContent.classList.toggle("open"); // Toggle the 'open' class
 
-          // Close the previously open text
-          document
-            .querySelectorAll(".text-content.open")
-            .forEach((openContent) => {
-              openContent.classList.remove("open");
-            });
-
-          // Toggle the 'open' class for the clicked text
-          textContent.classList.toggle("open");
-
-          // Toggle the icon class
-          const icon = toggle.querySelector("i");
-          icon.classList.toggle("fa-chevron-down");
-          icon.classList.toggle("fa-chevron-up");
-        });
+        const icon = toggle.querySelector("i");
+        icon.classList.toggle("fa-chevron-down"); // Toggle the icon class
+        icon.classList.toggle("fa-chevron-up");
       });
+    });
     </script>
   </body>
 </html>
