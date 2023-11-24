@@ -298,6 +298,7 @@ section#hero2 {
 }
 
 /* QUIZ.html */
+
 .app {
   position: relative;
   z-index: 1;
@@ -307,8 +308,8 @@ section#hero2 {
   padding: 10px 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
+  align-items: center;
+  justify-content: center;
 }
 
 .quiz h2 {
@@ -325,7 +326,7 @@ section#hero2 {
   border: 1px solid #222;
   padding: 10px;
   margin: 10px 0;
-  text-align: left;
+  text-align: center; /* Center text horizontally */
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s;
@@ -338,7 +339,7 @@ section#hero2 {
 }
 
 .qbtn:disabled {
-  cursor: no-drop;
+  cursor: not-allowed; /* Updated to a more semantic cursor value */
 }
 
 #next-btn {
@@ -364,7 +365,7 @@ section#hero2 {
 
 @media only screen and (max-width: 768px) {
   .quiz {
-    padding: 5px 0;
+    padding: 10px 0;
   }
 
   .quiz h2 {
@@ -381,7 +382,8 @@ section#hero2 {
   }
 }
 
-//* GALLERY.html */
+
+/* GALLERY.html */
 .container {
   position: relative;
 }
@@ -472,16 +474,6 @@ section#hero2 {
 
 .r {
   right: 10px; /* Adjusted the right position */
-}
-
-@media only screen and (max-width: 768px) {
-  .caption {
-    width: 80%; /* Adjust the width for smaller screens */
-  }
-
-  .arrow img {
-    width: 30px; /* Adjust the arrow size for smaller screens */
-  }
 }
 
 /* 404.html */
