@@ -707,7 +707,7 @@ section#hero3 {
 @media (max-width: 768px) {
   #hero3 video {
     width: 100%;
-    margin: 5px auto;
+    margin: 0px auto;
     border-radius: 0; 
   }
 
