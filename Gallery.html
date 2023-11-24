@@ -1,77 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="media/webhub.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome 6.4.2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Etusivu</title>
+    <style>
+      body {
+        height: 100vh;
+        background-color: #000;
+        background-image: url("media/picture.png");
+        backdrop-filter: blur(15px);
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-</head>
-
-<body>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a>WebHub</a></div>
+        <ul class="links">
+          <li><a href="Password.html">Salasana</a></li>
+          <li><a href="Security.html">Tietoturva</a></li>
+          <li><a href="AboutUs.html">Tietoa Meistä</a></li>
+          <li><a href="Quiz.html">Tietovisa</a></li>
+          <li><a href="Gallery.html">Galleria</a></li>
+          <li><a href="YouTube.html">YouTube</a></li>
+        </ul>
+        <!--<a href="#" class="action_btn">Get Started</a>-->
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="Password.html">Salasana</a></li>
+          <li><a href="Security.html">Tietoturva</a></li>
+          <li><a href="AboutUs.html">Tietoa Meistä</a></li>
+          <li><a href="Quiz.html">Tietovisa</a></li>
+          <li><a href="Gallery.html">Galleria</a></li>
+          <li><a href="YouTube.html">YouTube</a></li>
+        </ul>
+      </div>
+    </header>
     <div class="container">
-        <div id="slide">
-            <div class="item" style="background-image: url(media/Nkuva1.png);">
-                <div class="content">
-                    <div class="name">Murot.</div>
-                    <div class="des">Terveellinen aamupala arkeen... ja muutenkin jos tahtoo syödä niin iha jees ruoka</div>
-                    <button>See more</button>
-                </div>
+      <div id="slide">
+        <div class="item" style="background-image: url(media/Nkuva1.png)">
+          <div class="content">
+            <div class="name">Murot.</div>
+            <div class="des">
+              Terveellinen aamupala arkeen... ja muutenkin jos tahtoo syödä niin
+              iha jees ruoka
             </div>
-            <div class="item" style="background-image: url(media/Nkuva2.png);">
-                <div class="content">
-                    <div class="name">HurHur 2</div>
-                    <div class="des">Tässä videossa sukellamme Hurhur kakkosen maailmaan ja paljastamme mielenkiintoista sisältöä. Mitähän se mahtaisi olla? Ehkä Konstan salainen kanava?</div>
-                    <button>See more</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(media/Nkuva3.png);">
-                <div class="content">
-                    <div class="name">Jagabee?</div>
-                    <div class="des">Jagabee? Mitähköhän se voisi olla...? Konstaa se ainakin näyttää kovasti kiinnostavan</div>
-                    <button>See more</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(media/Nkuva4.png);">
-                <div class="content">
-                    <div class="name">Konsta ja Olli</div>
-                    <div class="des">On Konstan ja Ollin ystävyys vaan ihmeellistä.. sinä yhtenä päivänä he päättivät olevan valmiita ottamaan seuraavan askeleen, eli siis mennä yhteiseen hauta-arkkuun.</div>
-                    <button>See more</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(media/Nkuva5.png);">
-                <div class="content">
-                    <div class="name">Konsta Saajanto</div>
-                    <div class="des">Mielenkiintoinen, iloinen, ja elämästään nauttiva yksilö.</div>
-                    <button>See more</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(media/Nkuva6.png);">
-                <div class="content">
-                    <div class="name">Kiehtovaa</div>
-                    <div class="des">Voi Konsta, tähänkö sitä ollaan menty että pitää iltaisinkin aina tarkistaa että meneehän sillä Ollilla nyt kaikki hyvin :D</div>
-                    <button>See more</button>
-                </div>
-            </div>
+            <button>See more</button>
+          </div>
         </div>
-        <div class="buttons">
-            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        <div class="item" style="background-image: url(media/Nkuva2.png)">
+          <div class="content">
+            <div class="name">HurHur 2</div>
+            <div class="des">
+              Tässä videossa sukellamme Hurhur kakkosen maailmaan ja paljastamme
+              mielenkiintoista sisältöä. Mitähän se mahtaisi olla? Ehkä Konstan
+              salainen kanava?
+            </div>
+            <button>See more</button>
+          </div>
         </div>
+        <div class="item" style="background-image: url(media/Nkuva3.png)">
+          <div class="content">
+            <div class="name">Jagabee?</div>
+            <div class="des">
+              Jagabee? Mitähköhän se voisi olla...? Konstaa se ainakin näyttää
+              kovasti kiinnostavan
+            </div>
+            <button>See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(media/Nkuva4.png)">
+          <div class="content">
+            <div class="name">Konsta ja Olli</div>
+            <div class="des">
+              On Konstan ja Ollin ystävyys vaan ihmeellistä.. sinä yhtenä
+              päivänä he päättivät olevan valmiita ottamaan seuraavan askeleen,
+              eli siis mennä yhteiseen hauta-arkkuun.
+            </div>
+            <button>See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(media/Nkuva5.png)">
+          <div class="content">
+            <div class="name">Konsta Saajanto</div>
+            <div class="des">
+              Mielenkiintoinen, iloinen, ja elämästään nauttiva yksilö.
+            </div>
+            <button>See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(media/Nkuva6.png)">
+          <div class="content">
+            <div class="name">Kiehtovaa</div>
+            <div class="des">
+              Voi Konsta, tähänkö sitä ollaan menty että pitää iltaisinkin aina
+              tarkistaa että meneehän sillä Ollilla nyt kaikki hyvin :D
+            </div>
+            <button>See more</button>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
     </div>
 
     <script>
-        document.getElementById('next').onclick = function () {
-            let lists = document.querySelectorAll('.item');
-            document.getElementById('slide').appendChild(lists[0]);
-        }
-        document.getElementById('prev').onclick = function () {
-            let lists = document.querySelectorAll('.item');
-            document.getElementById('slide').prepend(lists[lists.length - 1]);
-        }
+      document.getElementById("next").onclick = function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").appendChild(lists[0]);
+      };
+      document.getElementById("prev").onclick = function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").prepend(lists[lists.length - 1]);
+      };
     </script>
-</body>
-
+  </body>
 </html>
