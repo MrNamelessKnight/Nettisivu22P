@@ -680,9 +680,13 @@ section#hero2 {
 
 /* ABOUTUS.html */
 #hero3 video {
-  width: 600px;
-  width: 600px;
+  width: 900px; 
+  height: auto; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 10px; /* Add margin */
 }
+
 section#hero3 {
   height: calc(100vh - 60px);
   display: flex;
@@ -691,19 +695,24 @@ section#hero3 {
   justify-content: center;
   text-align: center;
   color: #fff;
+  padding: 30px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  margin: 10px; 
 }
+
 #hero3 h1,
-h2 {
+#hero3 h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-/* Update the existing CSS for smaller screens */
 @media (max-width: 768px) {
-  #hero2 video {
+  #hero3 video {
     left: 50%;
     top: 36%;
-    width: 100%; /* Make the video responsive on smaller screens */
-    margin: 0 auto; /* Center the video horizontally */
+    width: 100%; 
+    margin: 0 auto; 
   }
 }
+
