@@ -148,8 +148,9 @@ section#hero {
 
 @media only screen and (max-width: 576px) {
   .container {
-    margin-top: 50px;
+    margin-top: 20px;
   }
+
 }
 
 /* PASSWORD.html */
@@ -295,7 +296,7 @@ section#hero2 {
 
 /* QUIZ.html */
 .quiz {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .quiz h2 {
@@ -351,7 +352,7 @@ section#hero2 {
 
 @media only screen and (max-width: 768px) {
   .quiz {
-    padding: 15px 0;
+    padding: 5px 0;
   }
 
   .quiz h2 {
@@ -364,7 +365,7 @@ section#hero2 {
 
   #next-btn {
     width: 100%;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 }
 
