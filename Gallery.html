@@ -21,7 +21,7 @@
       body {
         height: 100vh;
         background-color: #000;
-        background-image: url("media/picture.png");
+        background-image: url("media/flare.jpg");
         backdrop-filter: blur(15px);
         background-size: cover;
         background-position: center;
@@ -130,6 +130,7 @@
     </div>
 
     <script>
+      /* NAVIGATION BAR */
       const toggleBtn = document.querySelector(".toggle_btn");
       const toggleBtnIcon = document.querySelector(".toggle_btn i");
       const dropdownMenu = document.querySelector(".dropdown_menu");
@@ -167,7 +168,13 @@
       // Add event listeners to all .item elements
       let items = document.querySelectorAll(".item");
       items.forEach(function (item) {
+        // Click event for desktop
         item.addEventListener("click", function () {
+          toggleImageVisibility();
+        });
+
+        // Touch event for mobile
+        item.addEventListener("touchstart", function () {
           toggleImageVisibility();
         });
       });

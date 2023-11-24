@@ -64,6 +64,7 @@
     </main>
 
     <script>
+      /* NAVIGATION BAR */
       const toggleBtn = document.querySelector(".toggle_btn");
       const toggleBtnIcon = document.querySelector(".toggle_btn i");
       const dropdownMenu = document.querySelector(".dropdown_menu");
@@ -76,23 +77,6 @@
           ? "fa-solid fa-xmark"
           : "fa-solid fa-bars";
       };
-
-      async function checkForUpdates() {
-        try {
-          const response = await fetch("https://www.example.com/api/endpoint");
-          const data = await response.json();
-
-          if (data.hasUpdates) {
-            window.location.reload();
-          } else {
-            console.log("No updates available.");
-          }
-        } catch (error) {
-          console.error("Error checking for updates:", error.message);
-        }
-      }
-
-      setInterval(checkForUpdates, 60000);
     </script>
   </body>
 </html>
