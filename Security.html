@@ -62,10 +62,12 @@
               <i class="fas fa-chevron-down"></i>
             </div>
             <p style="font-size: 18px" class="text-content">
-              Tietoturva on keskeinen osa digitaalista maailmaa, <br> 
-              joka suojaa tietoja ja järjestelmiä luvattomalta käytöltä ja vahingoilta. 
-              <br>
-              Se on elintärkeää niin yksityishenkilöille kuin yrityksille ja organisaatioille.
+              Tietoturva on keskeinen osa digitaalista maailmaa, <br />
+              joka suojaa tietoja ja järjestelmiä luvattomalta käytöltä ja
+              vahingoilta.
+              <br />
+              Se on elintärkeää niin yksityishenkilöille kuin yrityksille ja
+              organisaatioille.
             </p>
           </div>
 
@@ -76,10 +78,13 @@
                 <i class="fas fa-chevron-down"></i>
               </div>
               <p style="font-size: 18px" class="text-content">
-                Tietoturva on tärkeää yksityisyyden suojelemiseksi ja riskien vähentämiseksi.
-                <br>
-                Se estää arkaluontoisen tiedon väärinkäytön ja suojaa taloudellisilta petoksilta 
-                <br>sekä identiteettivarkauksilta, myös pankkitileiltä ja luottokorttitiedoilta.
+                Tietoturva on tärkeää yksityisyyden suojelemiseksi ja riskien
+                vähentämiseksi.
+                <br />
+                Se estää arkaluontoisen tiedon väärinkäytön ja suojaa
+                taloudellisilta petoksilta
+                <br />sekä identiteettivarkauksilta, myös pankkitileiltä ja
+                luottokorttitiedoilta.
               </p>
             </div>
           </div>
@@ -126,14 +131,23 @@
           ? "fa-solid fa-xmark"
           : "fa-solid fa-bars";
       };
-
       document.querySelectorAll(".text-toggle").forEach((toggle) => {
         toggle.addEventListener("click", () => {
           const textContent = toggle.nextElementSibling; // Get the text content
-          textContent.classList.toggle("open"); // Toggle the 'open' class
 
+          // Close the previously open text
+          document
+            .querySelectorAll(".text-content.open")
+            .forEach((openContent) => {
+              openContent.classList.remove("open");
+            });
+
+          // Toggle the 'open' class for the clicked text
+          textContent.classList.toggle("open");
+
+          // Toggle the icon class
           const icon = toggle.querySelector("i");
-          icon.classList.toggle("fa-chevron-down"); // Toggle the icon class
+          icon.classList.toggle("fa-chevron-down");
           icon.classList.toggle("fa-chevron-up");
         });
       });
