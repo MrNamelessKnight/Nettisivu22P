@@ -266,40 +266,15 @@ section#hero2 {
   border-bottom: 1px solid #333;
   padding-bottom: 30px;
 }
-
 @media only screen and (max-width: 600px) {
   .password-container {
     width: 90%;
-    margin: 300px auto;
-    padding: 20px;
+    max-width: 100%;
     top: 50%;
-    transform: translateY(-50%);
-    position: relative;
-  }
-
-  #hero2 h2 {
-    font-size: 1.5rem;
-  }
-
-  .input-container {
-    padding: 8px;
-    
-  }
-
-  .input {
-    font-size: 18px;
-  }
-
-  .sbtn {
-    font-size: 16px;
-    padding: 8px 15px;
-  }
-
-  .alert-container {
-    width: 90%;
-    font-size: 16px;
+    margin: 50% auto 0; 
   }
 }
+
 /* QUIZ.html */
 .app {
   background-color: #0b0831;
@@ -389,6 +364,7 @@ section#hero2 {
     width: 100%;
     margin: 5px 0;
   }
+
 }
 /* GALLERY.html */
 .container {
