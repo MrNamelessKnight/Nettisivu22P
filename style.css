@@ -636,7 +636,7 @@ section#hero8 {
 @media only screen and (max-width: 768px) {
   .container,
   .slide {
-    padding: 50px; /* Adjust the padding as needed */
+    padding: 50px; 
     width: 100%;
     height: auto;
     left: 50%;
@@ -648,7 +648,7 @@ section#hero8 {
     width: 100%;
     height: auto;
     left: 50%;
-    top: 50%; /* Adjust the top position as needed */
+    top: 50%; 
     transform: translate(-50%, -50%);
     padding: 20px;
   }
@@ -665,7 +665,7 @@ section#hero8 {
     width: 100%;
     height: auto;
     left: 50%;
-    top: 100%; /* Adjust the top position as needed */
+    top: 100%; 
     transform: translate(-50%, -50%);
     padding: 0px;
     background: rgba(0, 0, 0, 0.336);
