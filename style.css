@@ -276,7 +276,11 @@ section#hero2 {
     font-size: 1.5rem;
   }
   .fa-copy {
-    right: 55%;
+    position: absolute;
+    right: 5px; /* Adjust this value based on your preference */
+    top: 40%;
+    left: 66%;
+    transform: translateY(-50%);
   }
 
   .input-container {
