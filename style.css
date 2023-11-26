@@ -551,15 +551,13 @@ section#hero2 {
 }
 @media only screen and (max-width: 768px) {
   .navbar {
-    z-index: 1000;
+    z-index: 1000; 
   }
   .container,
   .slide {
-    position: relative;
     padding: 120px;
     width: 100%;
     height: auto;
-    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: none;
