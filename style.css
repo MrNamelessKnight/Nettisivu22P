@@ -275,6 +275,9 @@ section#hero2 {
   #hero2 h2 {
     font-size: 1.5rem;
   }
+  .fa-copy {
+    right: 50%;
+  }
 
   .input-container {
     padding: 9px;
