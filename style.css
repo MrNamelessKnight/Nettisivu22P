@@ -633,6 +633,80 @@ section#hero8 {
     height: 500px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .container,
+  .slide {
+    padding: 50px; /* Adjust the padding as needed */
+    width: 100%;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: none;
+  }
+
+  .slide {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 50%; /* Adjust the top position as needed */
+    transform: translate(-50%, -50%);
+    padding: 20px;
+  }
+
+  .caption {
+    width: 90%;
+    padding: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+  }
+
+  .slide .caption {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 100%; /* Adjust the top position as needed */
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.336);
+  }
+
+  .caption h3 {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .caption p {
+    font-size: 16px;
+  }
+
+  .arrow {
+    top: 45%;
+  }
+
+  .slide-1,
+  .slide-2,
+  .slide-3,
+  .slide-4,
+  .slide-5,
+  .slide-6 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .slide-1,
+  .slide-4,
+  .slide-6 {
+    height: 300px;
+  }
+
+  .slide-2,
+  .slide-3,
+  .slide-5 {
+    height: 500px;
+  }
+}
 
 /* 404.html */
 section#heroo {
