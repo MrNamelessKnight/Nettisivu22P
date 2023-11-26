@@ -271,6 +271,8 @@ section#hero2 {
     width: 90%;
     top: 50%;
     margin: 50% auto 0;
+    padding: 30px;
+    border-radius: 10px;
   }
   #hero2 h2 {
     font-size: 1.5rem;
