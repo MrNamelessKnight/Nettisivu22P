@@ -160,18 +160,36 @@
           ];
 
           const questionElement = document.getElementById("question");
-          const answerButtons = document.getElementById("answer-buttons");
-          const nextButton = document.getElementById("next-btn");
+  const answerButtons = document.getElementById("answer-buttons");
+  const nextButton = document.getElementById("next-btn");
 
-          let currentQuestionIndex = 0;
-          let score = 0;
+  let currentQuestionIndex = 0;
+  let score = 0;
 
-          function startQuiz() {
-            currentQuestionIndex = 0;
-            score = 0;
-            nextButton.innerHTML = "Next";
-            showQuestion();
-          }
+  function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    shuffleQuestions();
+    showQuestion();
+  }
+
+  function shuffleQuestions() {
+    for (let i = questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
+
+    questions.forEach((question) => {
+      for (let i = question.answers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [question.answers[i], question.answers[j]] = [
+          question.answers[j],
+          question.answers[i],
+        ];
+      }
+    });
+  }
 
           function showQuestion() {
             resetState();

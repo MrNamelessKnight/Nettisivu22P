@@ -270,7 +270,7 @@ section#hero2 {
 @media only screen and (max-width: 600px) {
   .password-container {
     width: 90%;
-    margin: 350px auto;
+    margin: 300px auto;
     padding: 20px;
     top: 50%;
     transform: translateY(-50%);
