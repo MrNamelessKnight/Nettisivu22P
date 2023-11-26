@@ -49,216 +49,217 @@
         </ul>
       </div>
     </header>
-      <div class="app">
-        <h1>Tietovisa</h1>
-        <div class="quiz">
-          <h2 id="question">Kysymykset tulevat tähän</h2>
-          <div id="answer-buttons">
-            <button class="qbtn">Vastaus1</button>
-            <button class="qbtn">Vastaus2</button>
-            <button class="qbtn">Vastaus3</button>
-          </div>
-          <button id="next-btn">Seuraava</button>
+
+    <div class="app">
+      <h1>Tietovisa</h1>
+      <div class="quiz">
+        <h2 id="question">Kysymykset tulevat tähän</h2>
+        <div id="answer-buttons">
+          <button class="qbtn">Vastaus1</button>
+          <button class="qbtn">Vastaus2</button>
+          <button class="qbtn">Vastaus3</button>
         </div>
-        <script>
-          /* NAVIGATION BAR */
-          document.addEventListener("DOMContentLoaded", function () {
-            const toggleBtn = document.querySelector(".toggle_btn");
-            const toggleBtnIcon = document.querySelector(".toggle_btn i");
-            const dropdownMenu = document.querySelector(".dropdown_menu");
-
-            toggleBtn.onclick = function () {
-              dropdownMenu.classList.toggle("open");
-              const isOpen = dropdownMenu.classList.contains("open");
-
-              toggleBtnIcon.className = isOpen
-                ? "fa-solid fa-xmark"
-                : "fa-solid fa-bars";
-            };
-          });
-
-          /* QUIZ */
-          const questions = [
-            {
-              question:
-                "Minä vuonna ensimmäinen Star Wars elokuva julkaistiin?",
-              answers: [
-                { text: "1974", correct: false },
-                { text: "1977", correct: true },
-                { text: "1978", correct: false },
-              ],
-            },
-            {
-              question:
-                "Millä planeetalla Luke Skywalker varttui nuoreksi mieheksi?",
-              answers: [
-                { text: "Alderaan", correct: false },
-                { text: "Coruscant", correct: false },
-                { text: "Taatoine", correct: true },
-              ],
-            },
-            {
-              question: "Kuka ääninäytteli Darth Waderia?",
-              answers: [
-                { text: "James Earl Jones", correct: true },
-                { text: "James Earl Smith", correct: false },
-                { text: "James Earl John", correct: false },
-              ],
-            },
-            {
-              question:
-                "Kuka näytteli Frodoa Peter Jacsonin Taru sormusten herrasta elokuvatrilogiassa?",
-              answers: [
-                { text: "Elijah Wood", correct: true },
-                { text: "Sean Astin", correct: false },
-                { text: "Dominic Monaghan", correct: false },
-              ],
-            },
-            {
-              question: "Kuka loppujen lopuksi ratkaisi sormuksen kohtalon?",
-              answers: [
-                { text: "Gandalf", correct: false },
-                { text: "Frodo", correct: false },
-                { text: "Klonkku", correct: true },
-              ],
-            },
-            {
-              question:
-                "Kuka näytteli Albus Dumledorea kahdessa ensimmäisessä Harry Potter elokuvassa?",
-              answers: [
-                { text: "Richard Harris", correct: true },
-                { text: "Michael Gambon", correct: false },
-                { text: "Kenneth Branagh", correct: false },
-              ],
-            },
-            {
-              question: "Mihin tupaan Harry Potter kuului Tylypahkassa?",
-              answers: [
-                { text: "Korpinkynsi", correct: false },
-                { text: "Rohkelikko", correct: true },
-                { text: "Puuskupuh", correct: false },
-              ],
-            },
-            {
-              question:
-                "Kuinka monta elokuvaa Marvel Cinematic Universeen (MCU) sisältyy?",
-              answers: [
-                { text: "22", correct: false },
-                { text: "32", correct: true },
-                { text: "42", correct: false },
-              ],
-            },
-            {
-              question:
-                "Kuinka monessa Marvel (MCU) elokuvassa Kapteeni Amerikka esiintyy?",
-              answers: [
-                { text: "11", correct: true },
-                { text: "4", correct: false },
-                { text: "7", correct: false },
-              ],
-            },
-          ];
-
-          const questionElement = document.getElementById("question");
-  const answerButtons = document.getElementById("answer-buttons");
-  const nextButton = document.getElementById("next-btn");
-
-  let currentQuestionIndex = 0;
-  let score = 0;
-
-  function startQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    nextButton.innerHTML = "Next";
-    shuffleQuestions();
-    showQuestion();
-  }
-
-  function shuffleQuestions() {
-    for (let i = questions.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [questions[i], questions[j]] = [questions[j], questions[i]];
-    }
-
-    questions.forEach((question) => {
-      for (let i = question.answers.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [question.answers[i], question.answers[j]] = [
-          question.answers[j],
-          question.answers[i],
-        ];
-      }
-    });
-  }
-
-          function showQuestion() {
-            resetState();
-            const currentQuestion = questions[currentQuestionIndex];
-            const questionNo = currentQuestionIndex + 1;
-            questionElement.innerHTML = `${questionNo}. ${currentQuestion.question}`;
-
-            currentQuestion.answers.forEach((answer) => {
-              const button = document.createElement("button");
-              button.innerHTML = answer.text;
-              button.classList.add("qbtn");
-              answerButtons.appendChild(button);
-              if (answer.correct) {
-                button.dataset.correct = answer.correct;
-              }
-              button.addEventListener("click", selectAnswer);
-            });
-          }
-
-          function resetState() {
-            nextButton.style.display = "none";
-            while (answerButtons.firstChild) {
-              answerButtons.removeChild(answerButtons.firstChild);
-            }
-          }
-
-          function selectAnswer(e) {
-            const selectedBtn = e.target;
-            const isCorrect = selectedBtn.dataset.correct === "true";
-            if (isCorrect) {
-              selectedBtn.classList.add("correct");
-              score++;
-            } else {
-              selectedBtn.classList.add("incorrect");
-            }
-            Array.from(answerButtons.children).forEach((button) => {
-              if (button.dataset.correct === "true") {
-                button.classList.add("correct");
-              }
-              button.disabled = true;
-            });
-            nextButton.style.display = "block";
-          }
-
-          function showScore() {
-            resetState();
-            questionElement.innerHTML = `Sait pisteet ${score}/${questions.length}!`;
-            nextButton.innerHTML = "Pelaa uudelleen";
-            nextButton.style.display = "block";
-          }
-
-          function handleNextButton() {
-            currentQuestionIndex++;
-            if (currentQuestionIndex < questions.length) {
-              showQuestion();
-            } else {
-              showScore();
-            }
-          }
-
-          nextButton.addEventListener("click", () => {
-            if (currentQuestionIndex < questions.length) {
-              handleNextButton();
-            } else {
-              startQuiz();
-            }
-          });
-          startQuiz();
-        </script>
+        <button id="next-btn">Seuraava</button>
       </div>
+      
+      <script>
+        /* NAVIGATION BAR */
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleBtn = document.querySelector(".toggle_btn");
+          const toggleBtnIcon = document.querySelector(".toggle_btn i");
+          const dropdownMenu = document.querySelector(".dropdown_menu");
+
+          toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle("open");
+            const isOpen = dropdownMenu.classList.contains("open");
+
+            toggleBtnIcon.className = isOpen
+              ? "fa-solid fa-xmark"
+              : "fa-solid fa-bars";
+          };
+        });
+
+        /* QUIZ */
+        const questions = [
+          {
+            question: "Minä vuonna ensimmäinen Star Wars elokuva julkaistiin?",
+            answers: [
+              { text: "1974", correct: false },
+              { text: "1977", correct: true },
+              { text: "1978", correct: false },
+            ],
+          },
+          {
+            question:
+              "Millä planeetalla Luke Skywalker varttui nuoreksi mieheksi?",
+            answers: [
+              { text: "Alderaan", correct: false },
+              { text: "Coruscant", correct: false },
+              { text: "Taatoine", correct: true },
+            ],
+          },
+          {
+            question: "Kuka ääninäytteli Darth Waderia?",
+            answers: [
+              { text: "James Earl Jones", correct: true },
+              { text: "James Earl Smith", correct: false },
+              { text: "James Earl John", correct: false },
+            ],
+          },
+          {
+            question:
+              "Kuka näytteli Frodoa Peter Jacsonin Taru sormusten herrasta elokuvatrilogiassa?",
+            answers: [
+              { text: "Elijah Wood", correct: true },
+              { text: "Sean Astin", correct: false },
+              { text: "Dominic Monaghan", correct: false },
+            ],
+          },
+          {
+            question: "Kuka loppujen lopuksi ratkaisi sormuksen kohtalon?",
+            answers: [
+              { text: "Gandalf", correct: false },
+              { text: "Frodo", correct: false },
+              { text: "Klonkku", correct: true },
+            ],
+          },
+          {
+            question:
+              "Kuka näytteli Albus Dumledorea kahdessa ensimmäisessä Harry Potter elokuvassa?",
+            answers: [
+              { text: "Richard Harris", correct: true },
+              { text: "Michael Gambon", correct: false },
+              { text: "Kenneth Branagh", correct: false },
+            ],
+          },
+          {
+            question: "Mihin tupaan Harry Potter kuului Tylypahkassa?",
+            answers: [
+              { text: "Korpinkynsi", correct: false },
+              { text: "Rohkelikko", correct: true },
+              { text: "Puuskupuh", correct: false },
+            ],
+          },
+          {
+            question:
+              "Kuinka monta elokuvaa Marvel Cinematic Universeen (MCU) sisältyy?",
+            answers: [
+              { text: "22", correct: false },
+              { text: "32", correct: true },
+              { text: "42", correct: false },
+            ],
+          },
+          {
+            question:
+              "Kuinka monessa Marvel (MCU) elokuvassa Kapteeni Amerikka esiintyy?",
+            answers: [
+              { text: "11", correct: true },
+              { text: "4", correct: false },
+              { text: "7", correct: false },
+            ],
+          },
+        ];
+
+        const questionElement = document.getElementById("question");
+        const answerButtons = document.getElementById("answer-buttons");
+        const nextButton = document.getElementById("next-btn");
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuiz() {
+          currentQuestionIndex = 0;
+          score = 0;
+          nextButton.innerHTML = "Next";
+          shuffleQuestions();
+          showQuestion();
+        }
+
+        function shuffleQuestions() {
+          for (let i = questions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [questions[i], questions[j]] = [questions[j], questions[i]];
+          }
+
+          questions.forEach((question) => {
+            for (let i = question.answers.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [question.answers[i], question.answers[j]] = [
+                question.answers[j],
+                question.answers[i],
+              ];
+            }
+          });
+        }
+
+        function showQuestion() {
+          resetState();
+          const currentQuestion = questions[currentQuestionIndex];
+          const questionNo = currentQuestionIndex + 1;
+          questionElement.innerHTML = `${questionNo}. ${currentQuestion.question}`;
+
+          currentQuestion.answers.forEach((answer) => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("qbtn");
+            answerButtons.appendChild(button);
+            if (answer.correct) {
+              button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+          });
+        }
+
+        function resetState() {
+          nextButton.style.display = "none";
+          while (answerButtons.firstChild) {
+            answerButtons.removeChild(answerButtons.firstChild);
+          }
+        }
+
+        function selectAnswer(e) {
+          const selectedBtn = e.target;
+          const isCorrect = selectedBtn.dataset.correct === "true";
+          if (isCorrect) {
+            selectedBtn.classList.add("correct");
+            score++;
+          } else {
+            selectedBtn.classList.add("incorrect");
+          }
+          Array.from(answerButtons.children).forEach((button) => {
+            if (button.dataset.correct === "true") {
+              button.classList.add("correct");
+            }
+            button.disabled = true;
+          });
+          nextButton.style.display = "block";
+        }
+
+        function showScore() {
+          resetState();
+          questionElement.innerHTML = `Sait pisteet ${score}/${questions.length}!`;
+          nextButton.innerHTML = "Pelaa uudelleen";
+          nextButton.style.display = "block";
+        }
+
+        function handleNextButton() {
+          currentQuestionIndex++;
+          if (currentQuestionIndex < questions.length) {
+            showQuestion();
+          } else {
+            showScore();
+          }
+        }
+
+        nextButton.addEventListener("click", () => {
+          if (currentQuestionIndex < questions.length) {
+            handleNextButton();
+          } else {
+            startQuiz();
+          }
+        });
+        startQuiz();
+      </script>
+    </div>
   </body>
 </html>
