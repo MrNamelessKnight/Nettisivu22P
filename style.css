@@ -392,9 +392,10 @@ section#hero2 {
     margin: 5px 0;
   }
 }
+
 /* GALLERY.html */
 .container {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -550,7 +551,7 @@ section#hero2 {
 }
 @media only screen and (max-width: 768px) {
   .navbar {
-    z-index: 1000; /* Adjust this value based on your specific layout */
+    z-index: 1000; 
   }
   .container,
   .slide {
