@@ -278,7 +278,7 @@ section#hero2 {
   .fa-copy {
     position: absolute;
     right: 5px; /* Adjust this value based on your preference */
-    top: 53%;
+    top: 53.5%;
     left: 64%;
     transform: translateY(-50%);
   }
