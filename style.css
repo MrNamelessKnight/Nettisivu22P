@@ -563,6 +563,16 @@ section#hero8 {
   right: 10px;
 }
 @media only screen and (max-width: 600px) {
+  section#hero8 {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
   .container .navbar {
     flex-direction: row;
     justify-content: space-around;
@@ -587,7 +597,6 @@ section#hero8 {
     background-color: none;
 
   }
-
   .slide {
     width: 100%;
     height: auto;
