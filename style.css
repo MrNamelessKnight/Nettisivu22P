@@ -564,17 +564,18 @@ section#hero8 {
 }
 @media only screen and (max-width: 600px) {
   .container .navbar {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    text-align: center;
   }
   .container .links {
-    order: 2;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
   }
   .container .toggle_btn {
-    order: 3;
-    margin-top: 10px;
+    order: -1;
+    margin-top: 0;
   }
   .container,
   .slide {
