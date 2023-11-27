@@ -305,8 +305,8 @@ section#hero2 {
   }
 }
 
-/* QUIZ.html */
-.app {
+ /* QUIZ.html */
+ .app {
   background-color: #0b0831;
   width: 100%;
   max-width: 600px;
@@ -378,31 +378,15 @@ section#hero2 {
   background: #ff9393;
 }
 
-@media only screen and (max-width: 768px) {
-  .quiz {
-    padding: 20px 0;
-  }
-
-  .quiz h2 {
-    font-size: 16px;
-  }
-
-  .qbtn {
-    font-size: 16px;
-  }
-
-  #next-btn {
+@media only screen and (max-width: 600) {
+  .app {
+    padding: 50px;
     width: 100%;
-    margin: 5px 0;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: none;
   }
-
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-}
 
 /* GALLERY.html */
 section#hero8 {
@@ -570,7 +554,7 @@ section#hero8 {
 .r {
   right: 10px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 576px) {
   .container,
   .slide {
     padding: 50px;
