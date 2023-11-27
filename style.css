@@ -563,18 +563,9 @@ section#hero8 {
   right: 10px;
 }
 @media only screen and (max-width: 600px) {
-  section#hero8 {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-  }
   .container,
   .slide {
-    padding: 10px 0;
+    padding: 50px;
     width: 100%;
     height: auto;
     left: 50%;
@@ -587,12 +578,12 @@ section#hero8 {
     width: 100%;
     height: auto;
     left: 50%;
-    top:-40%;
+    top: 80px;
     transform: translate(-50%, -50%);
     padding: 10px 0;
   }
 
-  .caption {
+  .slide .caption {
     width: 90%;
     padding: 20px;
     left: 50%;
@@ -664,7 +655,7 @@ section#hero8 {
   }
 
   .arrow {
-    top: -50%;
+    top: 45%;
   }
 
   .slide-1,
