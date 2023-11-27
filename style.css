@@ -96,6 +96,7 @@ header {
 
 @media (max-width: 576px) {
   .dropdown_menu {
+    position: fixed;
     left: 2rem;
     width: unset;
   }
@@ -560,7 +561,7 @@ section#hero8 {
 .r {
   right: 10px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   section#hero8 {
     height: calc(100vh - 60px);
     display: flex;
