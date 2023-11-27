@@ -280,9 +280,9 @@ section#hero2 {
   }
   .fa-copy {
     position: absolute;
-    right: 5px; /* Adjust this value based on your preference */
-    top: 54%;
-    left: 64%;
+    right: 5px; 
+    top: 39.3%;
+    left: 66%;
     transform: translateY(-50%);
   }
 
