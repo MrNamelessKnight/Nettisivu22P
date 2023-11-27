@@ -554,7 +554,7 @@ section#hero8 {
 .r {
   right: 10px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 576px) {
   .container,
   .slide {
     padding: 50px;
