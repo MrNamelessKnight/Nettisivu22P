@@ -679,7 +679,18 @@ section#hero8 {
   .slide-5 {
     height: 500px;
   }
-}
+    /* New styles to prevent overlap with navbar */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+  
+    main {
+      padding-top: 60px; /* Adjust based on your navbar height */
+    }
+  }
 
 /* 404.html */
 section#heroo {
