@@ -580,15 +580,14 @@ section#hero8 {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: none;
-    position: relative !important;
-    margin-bottom: 0px !important;
+
   }
 
   .slide {
     width: 100%;
     height: auto;
     left: 50%;
-    top: 100%;
+    top:-40%;
     transform: translate(-50%, -50%);
     padding: 10px 0;
   }
@@ -665,7 +664,7 @@ section#hero8 {
   }
 
   .arrow {
-    top: 10%;
+    top: -50%;
   }
 
   .slide-1,
