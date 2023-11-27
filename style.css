@@ -571,7 +571,6 @@ section#hero8 {
     justify-content: center;
     text-align: center;
     color: #fff;
-    
   }
   .container,
   .slide {
@@ -581,13 +580,15 @@ section#hero8 {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: none;
+    position: relative !important;
+    margin-bottom: 0px !important;
   }
 
   .slide {
     width: 100%;
     height: auto;
     left: 50%;
-    top: 53%;
+    top: 100%;
     transform: translate(-50%, -50%);
     padding: 10px 0;
   }
@@ -599,17 +600,61 @@ section#hero8 {
     transform: translate(-50%, -50%);
     background: none;
   }
-
-  .slide .caption {
+  .slide-1 .caption {
     width: 100%;
     height: auto;
     left: 50%;
-    top: 116%;
+    top: 110%;
     transform: translate(-50%, -50%);
     padding: 10px 0;
     background: rgba(0, 0, 0, 0.336);
   }
 
+  .slide-2 .caption {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.336);
+  }
+  .slide-3 .caption {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.336);
+  }
+  .slide-4 .caption {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.336);
+  }
+  .slide-5 .caption {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.336);
+  }
+  .slide-6 .caption {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.336);
+  }
   .caption h3 {
     font-size: 18px;
     padding: 15px;
@@ -620,7 +665,7 @@ section#hero8 {
   }
 
   .arrow {
-    top: 45%;
+    top: 10%;
   }
 
   .slide-1,
