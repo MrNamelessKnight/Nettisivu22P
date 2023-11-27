@@ -91,6 +91,7 @@ header {
 
   .dropdown_menu {
     display: block;
+    margin-bottom: 20vh;
   }
 }
 
@@ -570,6 +571,7 @@ section#hero8 {
     justify-content: center;
     text-align: center;
     color: #fff;
+    
   }
   .container,
   .slide {
