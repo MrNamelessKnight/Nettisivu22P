@@ -563,6 +563,19 @@ section#hero8 {
   right: 10px;
 }
 @media only screen and (max-width: 600px) {
+  .container .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .container .links {
+    order: 2;
+    margin-top: 10px;
+  }
+  .container .toggle_btn {
+    order: 3;
+    margin-top: 10px;
+  }
   .container,
   .slide {
     padding: 50px;
