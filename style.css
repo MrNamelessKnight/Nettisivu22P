@@ -47,7 +47,6 @@ header {
 
 .navbar .toggle_btn {
   color: #fff;
-  z-index: 1;
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
@@ -80,8 +79,7 @@ header {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
-  .navbar .links,
-  .navbar .action_btn {
+  .navbar .links {
     display: none;
   }
 
@@ -91,13 +89,11 @@ header {
 
   .dropdown_menu {
     display: block;
-    margin-bottom: 20vh;
   }
 }
 
 @media (max-width: 576px) {
   .dropdown_menu {
-    position: fixed;
     left: 2rem;
     width: unset;
   }
@@ -280,9 +276,9 @@ section#hero2 {
   }
   .fa-copy {
     position: absolute;
-    right: 5px; 
-    top: 55.1%;
-    left: 65%;
+    right: 5px; /* Adjust this value based on your preference */
+    top: 54%;
+    left: 64%;
     transform: translateY(-50%);
   }
 
@@ -305,15 +301,14 @@ section#hero2 {
   }
 }
 
- /* QUIZ.html */
- .app {
+/* QUIZ.html */
+.app {
   background-color: #0b0831;
   width: 100%;
   max-width: 600px;
   margin: 100px auto 0;
   border-radius: 10px;
   padding: 30px;
-  
 }
 
 .app h1 {
@@ -379,13 +374,6 @@ section#hero2 {
 }
 
 @media only screen and (max-width: 768px) {
-  .app {
-    position: absolute;
-    z-index: 1;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .quiz {
     padding: 10px 0;
   }
@@ -404,17 +392,15 @@ section#hero2 {
   }
 }
 
-
-
 /* GALLERY.html */
 section#hero8 {
-  height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
 .container {
@@ -572,87 +558,44 @@ section#hero8 {
 .r {
   right: 10px;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .container,
   .slide {
-    padding: 50px;
+    padding: 120px;
     width: 100%;
     height: auto;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: none;
   }
+
   .slide {
     width: 100%;
     height: auto;
     left: 50%;
-    top: 80px;
+    top: 53%;
     transform: translate(-50%, -50%);
-    padding: 10px 0;
+    padding: 20px;
   }
 
-  .slide .caption {
+  .caption {
     width: 90%;
     padding: 20px;
     left: 50%;
     transform: translate(-50%, -50%);
     background: none;
   }
-  .slide-1 .caption {
+
+  .slide .caption {
     width: 100%;
     height: auto;
     left: 50%;
-    top: -20%;
+    top: 116%;
     transform: translate(-50%, -50%);
-    padding: 10px 0;
+    padding: 0px;
     background: rgba(0, 0, 0, 0.336);
   }
 
-  .slide-2 .caption {
-    width: 100%;
-    height: auto;
-    left: 50%;
-    top: -28%;
-    transform: translate(-50%, -50%);
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.336);
-  }
-  .slide-3 .caption {
-    width: 100%;
-    height: auto;
-    left: 50%;
-    top: -20%;
-    transform: translate(-50%, -50%);
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.336);
-  }
-  .slide-4 .caption {
-    width: 100%;
-    height: auto;
-    left: 50%;
-    top: -28%;
-    transform: translate(-50%, -50%);
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.336);
-  }
-  .slide-5 .caption {
-    width: 100%;
-    height: auto;
-    left: 50%;
-    top: -20%;
-    transform: translate(-50%, -50%);
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.336);
-  }
-  .slide-6 .caption {
-    width: 100%;
-    height: auto;
-    left: 50%;
-    top: -24%;
-    transform: translate(-50%, -50%);
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.336);
-  }
   .caption h3 {
     font-size: 18px;
     padding: 15px;
@@ -663,7 +606,7 @@ section#hero8 {
   }
 
   .arrow {
-    top: 120%;
+    top: 45%;
   }
 
   .slide-1,
@@ -675,7 +618,6 @@ section#hero8 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 60px;
   }
 
   .slide-1,
@@ -687,18 +629,81 @@ section#hero8 {
   .slide-2,
   .slide-3,
   .slide-5 {
-    height: 300px;
-
+    height: 500px;
   }
-  header {
-    position: fixed;
-    top: 0;
+}
+@media only screen and (max-width: 768px) {
+  .container,
+  .slide {
+    padding: 50px; 
     width: 100%;
-    z-index: 1000;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: none;
   }
 
-  main {
-    padding-top: 60px;
+  .slide {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 20px;
+  }
+
+  .caption {
+    width: 90%;
+    padding: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+  }
+
+  .slide .caption {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 100%; 
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.336);
+  }
+
+  .caption h3 {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .caption p {
+    font-size: 16px;
+  }
+
+  .arrow {
+    top: 45%;
+  }
+
+  .slide-1,
+  .slide-2,
+  .slide-3,
+  .slide-4,
+  .slide-5,
+  .slide-6 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .slide-1,
+  .slide-4,
+  .slide-6 {
+    height: 300px;
+  }
+
+  .slide-2,
+  .slide-3,
+  .slide-5 {
+    height: 500px;
   }
 }
 
@@ -776,39 +781,54 @@ section#hero2 {
 }
 
 /* ABOUTUS.html */
-#hero3 video {
-  position: absolute;
-  object-fit: cover;
-  text-align: center;
-  display: block;
-}
-
-section#hero3 {
+#hero3 {
+  position: relative;
   height: calc(100vh - 60px);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
 }
 
+#hero3 video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%; /* Adjust the width as needed */
+  max-width: 100%; /* Ensure it doesn't exceed the original size */
+  height: auto; /* Maintain aspect ratio */
+}
+
 #hero3 h1,
 #hero3 h2 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 33rem;
 }
+
 @media only screen and (max-width: 700px) {
   #hero3 video {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    position: relative;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjust the width as needed */
+    max-width: 100%; /* Ensure it doesn't exceed the original size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  section#hero3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;  }
+  
+  #hero3 h1 {
+    font-size: 2rem;
+    margin-bottom: 14rem;
   }
 
-  #hero3 h1,
-  #hero3 h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
 }
