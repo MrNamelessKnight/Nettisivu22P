@@ -11,12 +11,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <title>Tietovisa</title>
+    <title>Tietovisa 2</title>
     <style>
       body {
         height: 100vh;
         background-color: #000;
-        background-image: url("media/ihajustpurple.png");
+        background-image: url("media/cloud.jpg");
         backdrop-filter: blur(20px);
         background-size: cover;
         background-position: center;
@@ -26,7 +26,7 @@
 
   <body>
     <div class="app">
-      <h1>Tietovisa</h1>
+      <h1>Tietovisa 2</h1>
       <div class="quiz">
         <h2 id="question">Kysymykset tulevat tähän</h2>
         <div id="answer-buttons">
@@ -57,117 +57,129 @@
         /* QUIZ */
         const questions = [
           {
-            question: "Minä vuonna ensimmäinen Star Wars elokuva julkaistiin?",
-            answers: [
-              { text: "1974", correct: false },
-              { text: "1977", correct: true },
-              { text: "1978", correct: false },
-            ],
-          },
-          {
-            question:
-              "Millä planeetalla Luke Skywalker varttui nuoreksi mieheksi?",
-            answers: [
-              { text: "Alderaan", correct: false },
-              { text: "Coruscant", correct: false },
-              { text: "Taatoine", correct: true },
-            ],
-          },
-          {
-            question: "Kuka ääninäytteli Darth Waderia?",
-            answers: [
-              { text: "James Earl Jones", correct: true },
-              { text: "James Earl Smith", correct: false },
-              { text: "James Earl John", correct: false },
-            ],
-          },
-          {
-            question:
-              "Kuka näytteli Frodoa Peter Jacsonin Taru sormusten herrasta elokuvatrilogiassa?",
-            answers: [
-              { text: "Elijah Wood", correct: true },
-              { text: "Sean Astin", correct: false },
-              { text: "Dominic Monaghan", correct: false },
-            ],
-          },
-          {
-            question: "Kuka loppujen lopuksi ratkaisi sormuksen kohtalon?",
-            answers: [
-              { text: "Gandalf", correct: false },
-              { text: "Frodo", correct: false },
-              { text: "Klonkku", correct: true },
-            ],
-          },
-          {
-            question:
-              "Kuka näytteli Albus Dumledorea kahdessa ensimmäisessä Harry Potter elokuvassa?",
-            answers: [
-              { text: "Richard Harris", correct: true },
-              { text: "Michael Gambon", correct: false },
-              { text: "Kenneth Branagh", correct: false },
-            ],
-          },
-          {
-            question: "Mihin tupaan Harry Potter kuului Tylypahkassa?",
-            answers: [
-              { text: "Korpinkynsi", correct: false },
-              { text: "Rohkelikko", correct: true },
-              { text: "Puuskupuh", correct: false },
-            ],
-          },
-          {
-            question:
-              "Kuinka monta elokuvaa Marvel Cinematic Universeen (MCU) sisältyy?",
-            answers: [
-              { text: "22", correct: false },
-              { text: "32", correct: true },
-              { text: "42", correct: false },
-            ],
-          },
-          {
-            question:
-              "Kuinka monessa Marvel (MCU) elokuvassa Kapteeni Amerikka esiintyy?",
-            answers: [
-              { text: "11", correct: true },
-              { text: "4", correct: false },
-              { text: "7", correct: false },
-            ],
-          },
-          {
-            question:
-              "Kuka näytteli ensimmäisenä Hulkia Marvel Cinematic Universe -elokuvissa?",
-            answers: [
-              { text: "Edward Norton", correct: true },
-              { text: "Mark Ruffalo", correct: false },
-              { text: "Eric Bana", correct: false },
-            ],
-          },
-          {
-            question: "Mitä tarkoittaa MCU lyhenteenä?",
-            answers: [
-              { text: "Marvel Cinematic Universe", correct: true },
-              { text: "My Cool Universe", correct: false },
-              { text: "Mighty Comic Universe", correct: false },
-            ],
-          },
-          {
-            question: "Mikä on Marvelin ensimmäinen elokuva MCU:ssa?",
-            answers: [
-              { text: "Iron Man (2008)", correct: true },
-              { text: "Captain America: The First Avenger", correct: false },
-              { text: "Thor", correct: false },
-            ],
-          },
-          {
-            question:
-              "Mikä on suurin turnaus CS:GO:ssa, josta pelaajat kilpailevat?",
+            question: "Mikä on Nether-portaali ja miten se luodaan?",
             answers: [
               {
-                text: "ESL One Cologne on yksi merkittävimmistä CS:GO-turnauksista",
+                text: "Se on portti Netheriin ja luodaan obsidiaanista",
                 correct: true,
               },
-              { text: "CS:GO Championship Series", correct: false },
-              { text: "Global eSports Cup", correct: false },
+              {
+                text: "Se on portti taivaaseen ja luodaan pilvistä",
+                correct: false,
+              },
+              {
+                text: "Se on portti maanalaiseen luolaan ja luodaan kivestä",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question: "Miten valmistetaan leivän Minecraftissa?",
+            answers: [
+              {
+                text: "Yhdistämällä kolme vehnäjyvää työpöydällä",
+                correct: true,
+              },
+              { text: "Leipää ei voi valmistaa", correct: false },
+              { text: "Leipä valmistetaan uunissa", correct: false },
+            ],
+          },
+          {
+            question: "Mikä on maailman suurin valtio pinta-alaltaan?",
+            answers: [
+              { text: "Venäjä", correct: true },
+              { text: "Kiina", correct: false },
+              { text: "Yhdysvallat", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Kuka kirjoitti 'Romeo ja Julia'?",
+            answers: [
+              { text: "William Shakespeare", correct: true },
+              { text: "Jane Austen", correct: false },
+              { text: "Charles Dickens", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Mikä on maapallon korkein vuori?",
+            answers: [
+              { text: "Mount Everest", correct: true },
+              { text: "K2", correct: false },
+              { text: "Kilimanjaro", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Kuka keksi painovoiman lain?",
+            answers: [
+              { text: "Isaac Newton", correct: true },
+              { text: "Albert Einstein", correct: false },
+              { text: "Galileo Galilei", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Mikä on maailman suurin valtameri?",
+            answers: [
+              { text: "Tyynimeri", correct: true },
+              { text: "Atlantin valtameri", correct: false },
+              { text: "Intian valtameri", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Missä sijaitsee Eiffel-torni?",
+            answers: [
+              { text: "Pariisi, Ranska", correct: true },
+              { text: "Rooma, Italia", correct: false },
+              { text: "Lontoo, Iso-Britannia", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Mikä on kemiallinen merkki vedyllä?",
+            answers: [
+              { text: "H", correct: true },
+              { text: "O", correct: false },
+              { text: "C", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Kuka maalasi Mona Lisan?",
+            answers: [
+              { text: "Leonardo da Vinci", correct: true },
+              { text: "Vincent van Gogh", correct: false },
+              { text: "Pablo Picasso", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Mikä on maailman väkirikkain kaupunki?",
+            answers: [
+              { text: "Tokio, Japani", correct: true },
+              { text: "Peking, Kiina", correct: false },
+              { text: "Mumbai, Intia", correct: false },
+            ],
+          },
+          {
+            question: "Kysymys: Mikä on suurin nisäkäs maailmassa?",
+            answers: [
+              { text: "Sinivalas", correct: true },
+              { text: "Afrikan elefantti", correct: false },
+              { text: "Kirahvi", correct: false },
+            ],
+          },
+          {
+            question:
+              "Kysymys: Mikä tekee CS:GO:sta niin suositun kilpapelaamisen parissa?",
+            answers: [
+              {
+                text: "CS:GO tarjoaa tasapainoisen pelimekaniikan ja vaativan tiimityöskentelyn",
+                correct: true,
+              },
+              {
+                text: " Grafiikat ja visuaalinen tyyli",
+                correct: false,
+              },
+              {
+                text: "Pelin laaja karttavalikoima",
+                correct: false,
+              },
             ],
           },
         ];

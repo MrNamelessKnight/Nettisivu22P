@@ -11,12 +11,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <title>Tietovisa</title>
+    <title>Tietovisa 3</title>
     <style>
       body {
         height: 100vh;
         background-color: #000;
-        background-image: url("media/ihajustpurple.png");
+        background-image: url("media/image.png");
         backdrop-filter: blur(20px);
         background-size: cover;
         background-position: center;
@@ -26,7 +26,7 @@
 
   <body>
     <div class="app">
-      <h1>Tietovisa</h1>
+      <h1>Tietovisa 3</h1>
       <div class="quiz">
         <h2 id="question">Kysymykset tulevat tähän</h2>
         <div id="answer-buttons">
@@ -57,117 +57,144 @@
         /* QUIZ */
         const questions = [
           {
-            question: "Minä vuonna ensimmäinen Star Wars elokuva julkaistiin?",
-            answers: [
-              { text: "1974", correct: false },
-              { text: "1977", correct: true },
-              { text: "1978", correct: false },
-            ],
-          },
-          {
-            question:
-              "Millä planeetalla Luke Skywalker varttui nuoreksi mieheksi?",
-            answers: [
-              { text: "Alderaan", correct: false },
-              { text: "Coruscant", correct: false },
-              { text: "Taatoine", correct: true },
-            ],
-          },
-          {
-            question: "Kuka ääninäytteli Darth Waderia?",
-            answers: [
-              { text: "James Earl Jones", correct: true },
-              { text: "James Earl Smith", correct: false },
-              { text: "James Earl John", correct: false },
-            ],
-          },
-          {
-            question:
-              "Kuka näytteli Frodoa Peter Jacsonin Taru sormusten herrasta elokuvatrilogiassa?",
-            answers: [
-              { text: "Elijah Wood", correct: true },
-              { text: "Sean Astin", correct: false },
-              { text: "Dominic Monaghan", correct: false },
-            ],
-          },
-          {
-            question: "Kuka loppujen lopuksi ratkaisi sormuksen kohtalon?",
-            answers: [
-              { text: "Gandalf", correct: false },
-              { text: "Frodo", correct: false },
-              { text: "Klonkku", correct: true },
-            ],
-          },
-          {
-            question:
-              "Kuka näytteli Albus Dumledorea kahdessa ensimmäisessä Harry Potter elokuvassa?",
-            answers: [
-              { text: "Richard Harris", correct: true },
-              { text: "Michael Gambon", correct: false },
-              { text: "Kenneth Branagh", correct: false },
-            ],
-          },
-          {
-            question: "Mihin tupaan Harry Potter kuului Tylypahkassa?",
-            answers: [
-              { text: "Korpinkynsi", correct: false },
-              { text: "Rohkelikko", correct: true },
-              { text: "Puuskupuh", correct: false },
-            ],
-          },
-          {
-            question:
-              "Kuinka monta elokuvaa Marvel Cinematic Universeen (MCU) sisältyy?",
-            answers: [
-              { text: "22", correct: false },
-              { text: "32", correct: true },
-              { text: "42", correct: false },
-            ],
-          },
-          {
-            question:
-              "Kuinka monessa Marvel (MCU) elokuvassa Kapteeni Amerikka esiintyy?",
-            answers: [
-              { text: "11", correct: true },
-              { text: "4", correct: false },
-              { text: "7", correct: false },
-            ],
-          },
-          {
-            question:
-              "Kuka näytteli ensimmäisenä Hulkia Marvel Cinematic Universe -elokuvissa?",
-            answers: [
-              { text: "Edward Norton", correct: true },
-              { text: "Mark Ruffalo", correct: false },
-              { text: "Eric Bana", correct: false },
-            ],
-          },
-          {
-            question: "Mitä tarkoittaa MCU lyhenteenä?",
-            answers: [
-              { text: "Marvel Cinematic Universe", correct: true },
-              { text: "My Cool Universe", correct: false },
-              { text: "Mighty Comic Universe", correct: false },
-            ],
-          },
-          {
-            question: "Mikä on Marvelin ensimmäinen elokuva MCU:ssa?",
-            answers: [
-              { text: "Iron Man (2008)", correct: true },
-              { text: "Captain America: The First Avenger", correct: false },
-              { text: "Thor", correct: false },
-            ],
-          },
-          {
-            question:
-              "Mikä on suurin turnaus CS:GO:ssa, josta pelaajat kilpailevat?",
+            question: "Mitkä ovat tärkeimmät aseet CS:GO:ssa?",
             answers: [
               {
-                text: "ESL One Cologne on yksi merkittävimmistä CS:GO-turnauksista",
+                text: "AWP (Arctic Warfare Police) ja AK-47 ovat keskeisiä pelaajien suosimia aseita",
                 correct: true,
               },
-              { text: "CS:GO Championship Series", correct: false },
-              { text: "Global eSports Cup", correct: false },
+              { text: "M4A1-S ja P90", correct: false },
+              { text: "Desert Eagle ja UMP-45", correct: false },
+            ],
+          },
+          {
+            question: "Miten talousjärjestelmä toimii CS:GO:ssa?",
+            answers: [
+              {
+                text: "Pelaajat ansaitsevat rahaa suorittamalla tehtäviä ja voittamalla kierroksia, joka vaikuttaa aseiden ostovoimaan",
+                correct: true,
+              },
+              {
+                text: "Jokainen pelaaja saa saman määrän rahaa jokaisen kierroksen alussa",
+                correct: false,
+              },
+              {
+                text: "Rahaa ansaitaan vain voittamalla otteluita",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question:
+              "Mikä on 'bunny hopping' ja miten se vaikuttaa peliin?",
+            answers: [
+              {
+                text: "Bunny hopping on taito, jossa pelaaja yrittää liikkua nopeasti hyppimällä, vaikuttaen liikkumisen ennakoimattomuuteen",
+                correct: true,
+              },
+              {
+                text: "Se on tapa väistää vastustajien luoteja",
+                correct: false,
+              },
+              {
+                text: "Se on pelin bugi, joka aiheuttaa satunnaisia hyppyjä",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question:
+              "Millainen on CS:GO:n kilpapelaamisen karttavalikoima?",
+            answers: [
+              {
+                text: "Siihen kuuluu klassikkoja kuten Dust II, Mirage, ja Inferno, jotka tarjoavat erilaisia taktisia haasteita",
+                correct: true,
+              },
+              {
+                text: "Pelissä on vain yksi kilpailukartta",
+                correct: false,
+              },
+              {
+                text: "Kartit vaihtelevat jokaisessa ottelussa",
+                correct: false,
+              },
+            ],
+          },
+          // Add more CSGO questions if needed
+          {
+            question:
+              "Mikä tekee Fortnitesta erityisen muihin battle royale -peleihin verrattuna?",
+            answers: [
+              {
+                text: "Fortnite erottuu rakentamisen mekaniikastaan, joka mahdollistaa pelaajien luovan lähestymistavan taisteluun",
+                correct: true,
+              },
+              { text: "Grafiikoiden laatu", correct: false },
+              { text: "Pelaajien määrä per peli", correct: false },
+            ],
+          },
+          {
+            question: "Mitä ovat 'V-Bucks' Fortnite-pelissä?",
+            answers: [
+              {
+                text: "V-Bucks on pelin sisäinen valuutta, jota käytetään hahmojen ja esineiden ostamiseen",
+                correct: true,
+              },
+              { text: "Voimapisteitä parannuksiin", correct: false },
+              { text: "Voitto-pisteitä rankingissa", correct: false },
+            ],
+          },
+          {
+            question:
+              "Kuinka usein Fortnite saa päivityksiä ja mitä ne yleensä sisältävät?",
+            answers: [
+              {
+                text: "Fortnite saa säännöllisesti päivityksiä, jotka voivat sisältää uusia karttoja, pelitiloja, ja kosmeettisia lisäyksiä",
+                correct: true,
+              },
+              {
+                text: "Päivitykset tapahtuvat vain kerran vuodessa",
+                correct: false,
+              },
+              {
+                text: "Päivityksissä keskitytään vain bugikorjauksiin",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question: "Mikä on Among Us -pelin peruskonsepti?",
+            answers: [
+              {
+                text: "Pelaajat osallistuvat avaruusaluksen miehistön jäseninä, joista osa on pettureita, ja tehtävänä on selvittää petturit ennen kuin he tuhoavat aluksen",
+                correct: true,
+              },
+              { text: "Tutkijoiden kilpajuoksu", correct: false },
+              { text: "Aluksen rakentaminen", correct: false },
+            ],
+          },
+          {
+            question:
+              "Mikä tekee Among Usista suositun moninpelikokemuksen?",
+            answers: [
+              {
+                text: "Among Us korostaa sosiaalista vuorovaikutusta ja pelaajien kykyä tulkita toisten käyttäytymistä",
+                correct: true,
+              },
+              { text: "Nopea toiminta", correct: false },
+              { text: "Yksinpelikokemus", correct: false },
+            ],
+          },
+          {
+            question:
+              "Mitä tehtäviä pelaajat voivat suorittaa Among Us -pelissä?",
+            answers: [
+              {
+                text: "Tehtävät voivat vaihdella, kuten kaapeleiden yhdistäminen, korttien lukeminen ja moottorien käynnistäminen",
+                correct: true,
+              },
+              { text: "Taistelu vihollisia vastaan", correct: false },
+              { text: "Rahan kerääminen", correct: false },
             ],
           },
         ];
