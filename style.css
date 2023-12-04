@@ -394,13 +394,13 @@ section#hero2 {
 
 /* GALLERY.html */
 section#hero8 {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
 
 .container {
@@ -635,7 +635,7 @@ section#hero8 {
 @media only screen and (max-width: 768px) {
   .container,
   .slide {
-    padding: 50px; 
+    padding: 50px;
     width: 100%;
     height: auto;
     left: 50%;
@@ -647,7 +647,7 @@ section#hero8 {
     width: 100%;
     height: auto;
     left: 50%;
-    top: 50%; 
+    top: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
   }
@@ -664,7 +664,7 @@ section#hero8 {
     width: 100%;
     height: auto;
     left: 50%;
-    top: 100%; 
+    top: 100%;
     transform: translate(-50%, -50%);
     padding: 0px;
     background: rgba(0, 0, 0, 0.336);
@@ -710,21 +710,22 @@ section#hero8 {
 /* 404.html */
 section#heroo {
   position: relative;
-
+  width: 100%;
+  height: 100vh;
 }
+
 #heroo h1 a {
   font-size: 80px;
-  color: #ffffff;
+  color: #f4bb44;
   font-weight: 600;
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-bottom: 70px;
-  margin-top: 400px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 #heroo .background {
   position: fixed;
   right: 0;
@@ -735,7 +736,14 @@ section#heroo {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #000000;
-  filter: blur(40px);
+}
+
+#bgVideo {
+  position: fixed;
+  width: 100%;
+  filter: blur(5px);
+  height: 100%;
+  object-fit: cover;
 }
 
 /* YOUTUBE.html */
@@ -812,18 +820,19 @@ section#hero2 {
     max-width: 100%; /* Ensure it doesn't exceed the original size */
     height: auto; /* Maintain aspect ratio */
   }
-  
+
   section#hero3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;  }
-  
+    color: #fff;
+  }
+
   #hero3 h1 {
     font-size: 2rem;
     margin-bottom: 14rem;
   }
-
 }
+
