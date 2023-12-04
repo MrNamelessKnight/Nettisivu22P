@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="media/webhubtv.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome 6.4.2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Tactical</title>
+    <style>
+      body {
+        height: 100vh;
+        background-color: #000;
+        background-image: url("media/image.png");
+        backdrop-filter: blur(20px);
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <ul class="links">
+          <li><a href="Quiz.html">Visat</a></li>
+          <li><a href="Multiverse.html">Multiverse</a></li>
+          <li><a href="Wisdom.html">Wisdom</a></li>
+          <li><a href="Tactical.html">Tactical</a></li>
+        </ul>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="Quiz.html">Visat</a></li>
+          <li><a href="Multiverse.html">Multiverse</a></li>
+          <li><a href="Wisdom.html">Wisdom</a></li>
+          <li><a href="Tactical.html">Tactical</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <div class="app">
+      <h1>Tactical</h1>
+      <div class="quiz">
+        <h2 id="question">Kysymykset tulevat tähän</h2>
+        <div id="answer-buttons">
+          <button class="qbtn">Vastaus1</button>
+          <button class="qbtn">Vastaus2</button>
+          <button class="qbtn">Vastaus3</button>
+        </div>
+        <button id="next-btn">Seuraava</button>
+      </div>
+
+      <script>
+        /* NAVIGATION BAR */
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleBtn = document.querySelector(".toggle_btn");
+          const toggleBtnIcon = document.querySelector(".toggle_btn i");
+          const dropdownMenu = document.querySelector(".dropdown_menu");
+
+          toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle("open");
+            const isOpen = dropdownMenu.classList.contains("open");
+
+            toggleBtnIcon.className = isOpen
+              ? "fa-solid fa-xmark"
+              : "fa-solid fa-bars";
+          };
+        });
+
+        /* QUIZ */
+        const questions = [
+          {
+            question: "Mitkä ovat tärkeimmät aseet CS:GO:ssa?",
+            answers: [
+              {
+                text: "AWP (Arctic Warfare Police) ja AK-47 ovat keskeisiä pelaajien suosimia aseita",
+                correct: true,
+              },
+              { text: "M4A1-S ja P90", correct: false },
+              { text: "Desert Eagle ja UMP-45", correct: false },
+            ],
+          },
+          {
+            question: "Miten talousjärjestelmä toimii CS:GO:ssa?",
+            answers: [
+              {
+                text: "Pelaajat ansaitsevat rahaa suorittamalla tehtäviä ja voittamalla kierroksia, joka vaikuttaa aseiden ostovoimaan",
+                correct: true,
+              },
+              {
+                text: "Jokainen pelaaja saa saman määrän rahaa jokaisen kierroksen alussa",
+                correct: false,
+              },
+              {
+                text: "Rahaa ansaitaan vain voittamalla otteluita",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question:
+              "Mikä on 'bunny hopping' ja miten se vaikuttaa peliin?",
+            answers: [
+              {
+                text: "Bunny hopping on taito, jossa pelaaja yrittää liikkua nopeasti hyppimällä, vaikuttaen liikkumisen ennakoimattomuuteen",
+                correct: true,
+              },
+              {
+                text: "Se on tapa väistää vastustajien luoteja",
+                correct: false,
+              },
+              {
+                text: "Se on pelin bugi, joka aiheuttaa satunnaisia hyppyjä",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question:
+              "Millainen on CS:GO:n kilpapelaamisen karttavalikoima?",
+            answers: [
+              {
+                text: "Siihen kuuluu klassikkoja kuten Dust II, Mirage, ja Inferno, jotka tarjoavat erilaisia taktisia haasteita",
+                correct: true,
+              },
+              {
+                text: "Pelissä on vain yksi kilpailukartta",
+                correct: false,
+              },
+              {
+                text: "Kartit vaihtelevat jokaisessa ottelussa",
+                correct: false,
+              },
+            ],
+          },
+          // Add more CSGO questions if needed
+          {
+            question:
+              "Mikä tekee Fortnitesta erityisen muihin battle royale -peleihin verrattuna?",
+            answers: [
+              {
+                text: "Fortnite erottuu rakentamisen mekaniikastaan, joka mahdollistaa pelaajien luovan lähestymistavan taisteluun",
+                correct: true,
+              },
+              { text: "Grafiikoiden laatu", correct: false },
+              { text: "Pelaajien määrä per peli", correct: false },
+            ],
+          },
+          {
+            question: "Mitä ovat 'V-Bucks' Fortnite-pelissä?",
+            answers: [
+              {
+                text: "V-Bucks on pelin sisäinen valuutta, jota käytetään hahmojen ja esineiden ostamiseen",
+                correct: true,
+              },
+              { text: "Voimapisteitä parannuksiin", correct: false },
+              { text: "Voitto-pisteitä rankingissa", correct: false },
+            ],
+          },
+          {
+            question:
+              "Kuinka usein Fortnite saa päivityksiä ja mitä ne yleensä sisältävät?",
+            answers: [
+              {
+                text: "Fortnite saa säännöllisesti päivityksiä, jotka voivat sisältää uusia karttoja, pelitiloja, ja kosmeettisia lisäyksiä",
+                correct: true,
+              },
+              {
+                text: "Päivitykset tapahtuvat vain kerran vuodessa",
+                correct: false,
+              },
+              {
+                text: "Päivityksissä keskitytään vain bugikorjauksiin",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question: "Mikä on Among Us -pelin peruskonsepti?",
+            answers: [
+              {
+                text: "Pelaajat osallistuvat avaruusaluksen miehistön jäseninä, joista osa on pettureita, ja tehtävänä on selvittää petturit ennen kuin he tuhoavat aluksen",
+                correct: true,
+              },
+              { text: "Tutkijoiden kilpajuoksu", correct: false },
+              { text: "Aluksen rakentaminen", correct: false },
+            ],
+          },
+          {
+            question:
+              "Mikä tekee Among Usista suositun moninpelikokemuksen?",
+            answers: [
+              {
+                text: "Among Us korostaa sosiaalista vuorovaikutusta ja pelaajien kykyä tulkita toisten käyttäytymistä",
+                correct: true,
+              },
+              { text: "Nopea toiminta", correct: false },
+              { text: "Yksinpelikokemus", correct: false },
+            ],
+          },
+          {
+            question:
+              "Mitä tehtäviä pelaajat voivat suorittaa Among Us -pelissä?",
+            answers: [
+              {
+                text: "Tehtävät voivat vaihdella, kuten kaapeleiden yhdistäminen, korttien lukeminen ja moottorien käynnistäminen",
+                correct: true,
+              },
+              { text: "Taistelu vihollisia vastaan", correct: false },
+              { text: "Rahan kerääminen", correct: false },
+            ],
+          },
+        ];
+
+        const questionElement = document.getElementById("question");
+        const answerButtons = document.getElementById("answer-buttons");
+        const nextButton = document.getElementById("next-btn");
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuiz() {
+          currentQuestionIndex = 0;
+          score = 0;
+          nextButton.innerHTML = "Next";
+          shuffleQuestions();
+          showQuestion();
+        }
+
+        function shuffleQuestions() {
+          for (let i = questions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [questions[i], questions[j]] = [questions[j], questions[i]];
+          }
+
+          questions.forEach((question) => {
+            for (let i = question.answers.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [question.answers[i], question.answers[j]] = [
+                question.answers[j],
+                question.answers[i],
+              ];
+            }
+          });
+        }
+
+        function showQuestion() {
+          resetState();
+          const currentQuestion = questions[currentQuestionIndex];
+          const questionNo = currentQuestionIndex + 1;
+          questionElement.innerHTML = `${questionNo}. ${currentQuestion.question}`;
+
+          currentQuestion.answers.forEach((answer) => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("qbtn");
+            answerButtons.appendChild(button);
+            if (answer.correct) {
+              button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+          });
+        }
+
+        function resetState() {
+          nextButton.style.display = "none";
+          while (answerButtons.firstChild) {
+            answerButtons.removeChild(answerButtons.firstChild);
+          }
+        }
+
+        function selectAnswer(e) {
+          const selectedBtn = e.target;
+          const isCorrect = selectedBtn.dataset.correct === "true";
+          if (isCorrect) {
+            selectedBtn.classList.add("correct");
+            score++;
+          } else {
+            selectedBtn.classList.add("incorrect");
+          }
+          Array.from(answerButtons.children).forEach((button) => {
+            if (button.dataset.correct === "true") {
+              button.classList.add("correct");
+            }
+            button.disabled = true;
+          });
+          nextButton.style.display = "block";
+        }
+
+        function showScore() {
+          resetState();
+          questionElement.innerHTML = `Sait pisteet ${score}/${questions.length}!`;
+          nextButton.innerHTML = "Pelaa uudelleen";
+          nextButton.style.display = "block";
+        }
+
+        function handleNextButton() {
+          currentQuestionIndex++;
+          if (currentQuestionIndex < questions.length) {
+            showQuestion();
+          } else {
+            showScore();
+          }
+        }
+
+        nextButton.addEventListener("click", () => {
+          if (currentQuestionIndex < questions.length) {
+            handleNextButton();
+          } else {
+            startQuiz();
+          }
+        });
+        startQuiz();
+      </script>
+    </div>
+  </body>
+</html>

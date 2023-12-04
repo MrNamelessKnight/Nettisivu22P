@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="media/webhubtv.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome 6.4.2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Wisdom</title>
+    <style>
+      body {
+        height: 100vh;
+        background-color: #000;
+        background-image: url("media/cloud.jpg");
+        backdrop-filter: blur(20px);
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <ul class="links">
+          <li><a href="Quiz.html">Visat</a></li>
+          <li><a href="Multiverse.html">Multiverse</a></li>
+          <li><a href="Wisdom.html">Wisdom</a></li>
+          <li><a href="Tactical.html">Tactical</a></li>
+        </ul>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="Quiz.html">Visat</a></li>
+          <li><a href="Multiverse.html">Multiverse</a></li>
+          <li><a href="Wisdom.html">Wisdom</a></li>
+          <li><a href="Tactical.html">Tactical</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="app">
+      <h1>Wisdom</h1>
+      <div class="quiz">
+        <h2 id="question">Kysymykset tulevat tähän</h2>
+        <div id="answer-buttons">
+          <button class="qbtn">Vastaus1</button>
+          <button class="qbtn">Vastaus2</button>
+          <button class="qbtn">Vastaus3</button>
+        </div>
+        <button id="next-btn">Seuraava</button>
+      </div>
+
+      <script>
+        /* NAVIGATION BAR */
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleBtn = document.querySelector(".toggle_btn");
+          const toggleBtnIcon = document.querySelector(".toggle_btn i");
+          const dropdownMenu = document.querySelector(".dropdown_menu");
+
+          toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle("open");
+            const isOpen = dropdownMenu.classList.contains("open");
+
+            toggleBtnIcon.className = isOpen
+              ? "fa-solid fa-xmark"
+              : "fa-solid fa-bars";
+          };
+        });
+
+        /* QUIZ */
+        const questions = [
+          {
+            question: "Mikä on Nether-portaali ja miten se luodaan?",
+            answers: [
+              {
+                text: "Se on portti Netheriin ja luodaan obsidiaanista",
+                correct: true,
+              },
+              {
+                text: "Se on portti taivaaseen ja luodaan pilvistä",
+                correct: false,
+              },
+              {
+                text: "Se on portti maanalaiseen luolaan ja luodaan kivestä",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question: "Miten valmistetaan leivän Minecraftissa?",
+            answers: [
+              {
+                text: "Yhdistämällä kolme vehnäjyvää työpöydällä",
+                correct: true,
+              },
+              { text: "Leipää ei voi valmistaa", correct: false },
+              { text: "Leipä valmistetaan uunissa", correct: false },
+            ],
+          },
+          {
+            question: "Mikä on maailman suurin valtio pinta-alaltaan?",
+            answers: [
+              { text: "Venäjä", correct: true },
+              { text: "Kiina", correct: false },
+              { text: "Yhdysvallat", correct: false },
+            ],
+          },
+          {
+            question: "Kuka kirjoitti 'Romeo ja Julia'?",
+            answers: [
+              { text: "William Shakespeare", correct: true },
+              { text: "Jane Austen", correct: false },
+              { text: "Charles Dickens", correct: false },
+            ],
+          },
+          {
+            question: "Mikä on maapallon korkein vuori?",
+            answers: [
+              { text: "Mount Everest", correct: true },
+              { text: "K2", correct: false },
+              { text: "Kilimanjaro", correct: false },
+            ],
+          },
+          {
+            question: "Kuka keksi painovoiman lain?",
+            answers: [
+              { text: "Isaac Newton", correct: true },
+              { text: "Albert Einstein", correct: false },
+              { text: "Galileo Galilei", correct: false },
+            ],
+          },
+          {
+            question: "Mikä on maailman suurin valtameri?",
+            answers: [
+              { text: "Tyynimeri", correct: true },
+              { text: "Atlantin valtameri", correct: false },
+              { text: "Intian valtameri", correct: false },
+            ],
+          },
+          {
+            question: "Missä sijaitsee Eiffel-torni?",
+            answers: [
+              { text: "Pariisi, Ranska", correct: true },
+              { text: "Rooma, Italia", correct: false },
+              { text: "Lontoo, Iso-Britannia", correct: false },
+            ],
+          },
+          {
+            question: "Mikä on kemiallinen merkki vedyllä?",
+            answers: [
+              { text: "H", correct: true },
+              { text: "O", correct: false },
+              { text: "C", correct: false },
+            ],
+          },
+          {
+            question: "Kuka maalasi Mona Lisan?",
+            answers: [
+              { text: "Leonardo da Vinci", correct: true },
+              { text: "Vincent van Gogh", correct: false },
+              { text: "Pablo Picasso", correct: false },
+            ],
+          },
+          {
+            question: "Mikä on maailman väkirikkain kaupunki?",
+            answers: [
+              { text: "Tokio, Japani", correct: true },
+              { text: "Peking, Kiina", correct: false },
+              { text: "Mumbai, Intia", correct: false },
+            ],
+          },
+          {
+            question: "Mikä on suurin nisäkäs maailmassa?",
+            answers: [
+              { text: "Sinivalas", correct: true },
+              { text: "Afrikan elefantti", correct: false },
+              { text: "Kirahvi", correct: false },
+            ],
+          },
+          {
+            question:
+              "Mikä tekee CS:GO:sta niin suositun kilpapelaamisen parissa?",
+            answers: [
+              {
+                text: "CS:GO tarjoaa tasapainoisen pelimekaniikan ja vaativan tiimityöskentelyn",
+                correct: true,
+              },
+              {
+                text: " Grafiikat ja visuaalinen tyyli",
+                correct: false,
+              },
+              {
+                text: "Pelin laaja karttavalikoima",
+                correct: false,
+              },
+            ],
+          },
+        ];
+
+        const questionElement = document.getElementById("question");
+        const answerButtons = document.getElementById("answer-buttons");
+        const nextButton = document.getElementById("next-btn");
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuiz() {
+          currentQuestionIndex = 0;
+          score = 0;
+          nextButton.innerHTML = "Next";
+          shuffleQuestions();
+          showQuestion();
+        }
+
+        function shuffleQuestions() {
+          for (let i = questions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [questions[i], questions[j]] = [questions[j], questions[i]];
+          }
+
+          questions.forEach((question) => {
+            for (let i = question.answers.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [question.answers[i], question.answers[j]] = [
+                question.answers[j],
+                question.answers[i],
+              ];
+            }
+          });
+        }
+
+        function showQuestion() {
+          resetState();
+          const currentQuestion = questions[currentQuestionIndex];
+          const questionNo = currentQuestionIndex + 1;
+          questionElement.innerHTML = `${questionNo}. ${currentQuestion.question}`;
+
+          currentQuestion.answers.forEach((answer) => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("qbtn");
+            answerButtons.appendChild(button);
+            if (answer.correct) {
+              button.dataset.correct = answer.correct;
+            }
+            button.addEventListener("click", selectAnswer);
+          });
+        }
+
+        function resetState() {
+          nextButton.style.display = "none";
+          while (answerButtons.firstChild) {
+            answerButtons.removeChild(answerButtons.firstChild);
+          }
+        }
+
+        function selectAnswer(e) {
+          const selectedBtn = e.target;
+          const isCorrect = selectedBtn.dataset.correct === "true";
+          if (isCorrect) {
+            selectedBtn.classList.add("correct");
+            score++;
+          } else {
+            selectedBtn.classList.add("incorrect");
+          }
+          Array.from(answerButtons.children).forEach((button) => {
+            if (button.dataset.correct === "true") {
+              button.classList.add("correct");
+            }
+            button.disabled = true;
+          });
+          nextButton.style.display = "block";
+        }
+
+        function showScore() {
+          resetState();
+          questionElement.innerHTML = `Sait pisteet ${score}/${questions.length}!`;
+          nextButton.innerHTML = "Pelaa uudelleen";
+          nextButton.style.display = "block";
+        }
+
+        function handleNextButton() {
+          currentQuestionIndex++;
+          if (currentQuestionIndex < questions.length) {
+            showQuestion();
+          } else {
+            showScore();
+          }
+        }
+
+        nextButton.addEventListener("click", () => {
+          if (currentQuestionIndex < questions.length) {
+            handleNextButton();
+          } else {
+            startQuiz();
+          }
+        });
+        startQuiz();
+      </script>
+    </div>
+  </body>
+</html>
