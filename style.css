@@ -342,6 +342,20 @@ section#hero2 {
   transition: all 0.3s;
   font-size: 18px;
 }
+.qbtn1 {
+  background: #6030b8;
+  color: #ffffffda;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+}
 
 .qbtn:hover:not([disabled]) {
   background: #4832a83a;
