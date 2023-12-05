@@ -579,16 +579,12 @@ section#hero8 {
     width: 100%;
     height: auto;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    background-color: none;
+    background-color: transparent;
   }
 
   .slide {
-    width: 100%;
-    height: auto;
-    left: 50%;
-    top: 53%;
-    transform: translate(-50%, -50%);
     padding: 20px;
   }
 
@@ -596,18 +592,14 @@ section#hero8 {
     width: 90%;
     padding: 20px;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    background: none;
+    background: rgba(0, 0, 0, 0.336);
   }
 
   .slide .caption {
     width: 100%;
-    height: auto;
-    left: 50%;
-    top: 116%;
-    transform: translate(-50%, -50%);
     padding: 0px;
-    background: rgba(0, 0, 0, 0.336);
   }
 
   .caption h3 {
@@ -646,6 +638,7 @@ section#hero8 {
     height: 500px;
   }
 }
+
 
 /* 404.html */
 section#heroo {
