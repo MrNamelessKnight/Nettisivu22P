@@ -573,9 +573,18 @@ section#hero8 {
   right: 10px;
 }
 @media only screen and (max-width: 768px) {
+  /* Navbar Styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001; /* Ensure it is above the slides */
+  }
+
+  /* Existing Styles for Slides */
   .container,
   .slide {
-    padding: 50px;
+    padding: 120px;
     width: 100%;
     height: auto;
     left: 50%;
@@ -621,15 +630,6 @@ section#hero8 {
 
   .arrow {
     top: 45%;
-  }
-
-  .app {
-    padding: 50px;
-    width: 100%;
-    height: auto;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: none;
   }
 
   .slide-1,
