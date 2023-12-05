@@ -573,18 +573,15 @@ section#hero8 {
   right: 10px;
 }
 @media only screen and (max-width: 768px) {
-  /* Navbar Styles */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1001; /* Ensure it is above the slides */
-  }
-
-  /* Existing Styles for Slides */
   .container,
   .slide {
-    padding: 120px;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
     width: 100%;
     height: auto;
     left: 50%;
@@ -652,7 +649,7 @@ section#hero8 {
   .slide-2,
   .slide-3,
   .slide-5 {
-    height: 500px;
+    height: 300px;
   }
 }
 
