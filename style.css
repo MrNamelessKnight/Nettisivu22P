@@ -575,13 +575,7 @@ section#hero8 {
 @media only screen and (max-width: 768px) {
   .container,
   .slide {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+    padding: 120px;
     width: 100%;
     height: auto;
     left: 50%;
