@@ -575,16 +575,20 @@ section#hero8 {
 @media only screen and (max-width: 768px) {
   .container,
   .slide {
-    padding: 120px;
+    padding: 50px;
     width: 100%;
     height: auto;
     left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
-    background-color: transparent;
+    background-color: none;
   }
 
   .slide {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 53%;
+    transform: translate(-50%, -50%);
     padding: 20px;
   }
 
@@ -592,14 +596,18 @@ section#hero8 {
     width: 90%;
     padding: 20px;
     left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.336);
+    background: none;
   }
 
   .slide .caption {
     width: 100%;
+    height: auto;
+    left: 50%;
+    top: 116%;
+    transform: translate(-50%, -50%);
     padding: 0px;
+    background: rgba(0, 0, 0, 0.336);
   }
 
   .caption h3 {
@@ -613,6 +621,15 @@ section#hero8 {
 
   .arrow {
     top: 45%;
+  }
+
+  .app {
+    padding: 50px;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: none;
   }
 
   .slide-1,
@@ -638,7 +655,6 @@ section#hero8 {
     height: 500px;
   }
 }
-
 
 /* 404.html */
 section#heroo {
