@@ -418,12 +418,14 @@ section#hero8 {
 }
 
 .container {
-  border: solid 2px black;
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 500px;
+  padding: 50px;
+  background-color: #f5f5f5;
 }
 
 .slide-1 {
@@ -618,7 +620,7 @@ section#hero8 {
   }
 
   .arrow {
-    top: 52%;
+    top: 5%;
   }
 
   .slide-1,
